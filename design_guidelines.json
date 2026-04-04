@@ -1,0 +1,98 @@
+{
+  "theme": "dark",
+  "archetype": "5 (Jewel & Luxury)",
+  "colors": {
+    "background": "#040914",
+    "surface": "#0B1325",
+    "surface_glass": "rgba(255, 255, 255, 0.03)",
+    "border": "#2A344A",
+    "border_light": "rgba(255, 255, 255, 0.1)",
+    "primary": "#D4AF37",
+    "primary_hover": "#C5A059",
+    "text_main": "#FFFFFF",
+    "text_muted": "#A0ABC0",
+    "text_on_primary": "#000000"
+  },
+  "typography": {
+    "heading_font": "Playfair Display, serif",
+    "body_font": "Outfit, sans-serif",
+    "h1": "text-5xl md:text-6xl+ font-medium tracking-tight leading-tight",
+    "h2": "text-3xl md:text-5xl font-medium tracking-tight",
+    "h3": "text-2xl md:text-3xl font-medium",
+    "body": "text-base md:text-lg leading-relaxed",
+    "overline": "text-xs md:text-sm uppercase tracking-[0.2em] font-medium"
+  },
+  "spacing": {
+    "section_padding": "py-24 md:py-32",
+    "container": "max-w-7xl mx-auto px-6 md:px-12",
+    "grid_gap": "gap-8 md:gap-16"
+  },
+  "layout_components": [
+    {
+      "name": "Header",
+      "description": "Sticky navigation, backdrop-blur-xl bg-[#040914]/80, elegant logo on left, 3-5 nav links centered, 'Contact Us' button on right. Use lucide Crown icon and 'Goldner & Dias Paes' text for logo."
+    },
+    {
+      "name": "Hero Section",
+      "description": "Full-width background image with text overlay. Use 'luxury_hero_bg' as bg-image. bg-black/40 overlay for contrast. Left or Center aligned content. Overline: 'EXCELLENCE IN LEGAL ADVOCACY'. H1: 'Goldner & Dias Paes Advocacia'. Primary CTA button.",
+      "image_url": "https://static.prod-images.emergentagent.com/jobs/771a6bcd-c7f6-482a-9d86-9383bcd9fa63/images/91a19b2c7612fe18e1422da289bc2cfacac5937c00afa2f15b9ebab3aa6ea446.png"
+    },
+    {
+      "name": "Value Proposition",
+      "description": "3 columns. grid-cols-1 md:grid-cols-3. Very clean, generous spacing. Icons in gold (#D4AF37). Short titles like 'Unparalleled Expertise', 'Strategic Vision', 'Discreet Representation'."
+    },
+    {
+      "name": "About / Authority Split Layout",
+      "description": "Grid md:grid-cols-2. Left side: Text focused, large heading, elegant paragraph, gold accent line. Right side: 'luxury_office_interior' image, max-h-[80vh] object-cover rounded-sm.",
+      "image_url": "https://static.prod-images.emergentagent.com/jobs/771a6bcd-c7f6-482a-9d86-9383bcd9fa63/images/cfedb054b684d47fc508baf2e1d84b0e8844b5efaba84f147d8d34286f9ee29e.png"
+    },
+    {
+      "name": "Services Grid",
+      "description": "6 cards grid. Glassmorphism cards (bg-white/5 backdrop-blur-sm) with 1px border-white/10. Hover: border-[#D4AF37]/50 and subtle translate-y. Minimalist lucide icons."
+    },
+    {
+      "name": "Differentiation",
+      "description": "Can be integrated below or near About section. 3-4 bullet points using Lucide CheckCircle in Gold, large text, stacked vertically with good spacing."
+    },
+    {
+      "name": "Founder-Partner Profile",
+      "description": "Single profile. Flex row or grid. Image: Professional lawyer portrait. Clean, minimal text.",
+      "image_url": "https://images.unsplash.com/photo-1584940120505-117038d90b05?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1MDV8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBsYXd5ZXIlMjBwb3J0cmFpdCUyMGNvcnBvcmF0ZXxlbnwwfHx8fDE3NzUyOTUzMzV8MA&ixlib=rb-4.1.0&q=85"
+    },
+    {
+      "name": "Office Locations",
+      "description": "Pretty component showing 3 locations (e.g., São Paulo, Rio de Janeiro, Brasília). 3 cards with images at the top, location details below.",
+      "images": [
+        "https://static.prod-images.emergentagent.com/jobs/771a6bcd-c7f6-482a-9d86-9383bcd9fa63/images/e64d7a1245333d3d9e21f469d4c534a309f1352070b0d4dab79ac1a396c548da.png",
+        "https://images.unsplash.com/photo-1547669205-39038d0a1df1?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1OTV8MHwxfHNlYXJjaHw0fHxtb2Rlcm4lMjBvZmZpY2UlMjBidWlsZGluZyUyMGV4dGVyaW9yJTIwY2l0eXxlbnwwfHx8fDE3NzUyOTUzMzV8MA&ixlib=rb-4.1.0&q=85",
+        "https://images.unsplash.com/photo-1694702730868-a34da58c1427?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1OTV8MHwxfHNlYXJjaHwzfHxtb2Rlcm4lMjBvZmZpY2UlMjBidWlsZGluZyUyMGV4dGVyaW9yJTIwY2l0eXxlbnwwfHx8fDE3NzUyOTUzMzV8MA&ixlib=rb-4.1.0&q=85"
+      ]
+    },
+    {
+      "name": "CTA Section",
+      "description": "Dark background with 'dark_navy_gold_texture'. Centered text. Prominent Gold 'Contact Us' button. No forms.",
+      "image_url": "https://static.prod-images.emergentagent.com/jobs/771a6bcd-c7f6-482a-9d86-9383bcd9fa63/images/1914232fbf850a59582af5e31fb6d870281c9894d4a2241403664b640f19fe4c.png"
+    },
+    {
+      "name": "Footer",
+      "description": "Clean footer, dark background, social media links (Lucide icons), copyright text."
+    }
+  ],
+  "motion_and_interactions": {
+    "hover_states": "All buttons should scale slightly or change background brightness. Cards should have border transitions and slight lift (-translate-y-1).",
+    "transitions": "Use Tailwind transition-all duration-300 ease-out"
+  },
+  "testing": {
+    "instructions": "All interactive elements, buttons, nav links, and cards MUST include data-testid attribute (e.g. data-testid='contact-us-button')."
+  },
+  "instructions_to_main_agent": [
+    "Use standard Tailwind classes. Do not use random external CSS files for layout.",
+    "Implement 'Playfair Display' and 'Outfit' fonts via Google Fonts in index.html or global CSS.",
+    "Ensure the hero text has proper contrast against the background image. Use drop-shadow or a gradient overlay if necessary.",
+    "Do NOT use 'Inter' for headings. Only 'Playfair Display' for Headings and 'Outfit' for Body.",
+    "Use Lucide-React for all icons. Ensure they are sized appropriately.",
+    "Apply all media URLs exactly as provided in this file.",
+    "Logo: Since the user provided a logo description ('gold/navy crest design with crown'), create a text-based logo using the Lucide 'Crown' icon in gold (#D4AF37) next to 'Goldner & Dias Paes' text in Playfair Display.",
+    "Implement the 'Contact Us' button as a prominent, solid gold (#D4AF37) button with black text. Do not include a form."
+  ]
+}
