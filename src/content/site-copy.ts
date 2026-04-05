@@ -186,7 +186,7 @@ export const locales: Record<Locale, SiteCopy> = {
       members: [
         {
           name: "Bruno Goldner",
-          role: "Fundador",
+          role: "Sócio-Fundador",
           image: {
             src: founderImage,
             alt: "Retrato de Bruno Goldner, fundador do escrit\u00f3rio, em traje formal.",

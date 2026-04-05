@@ -56,22 +56,22 @@ export function TestimonialsSection({
 
   return (
     <>
-      <section className="bg-stone-50 px-4 py-16 sm:px-8 sm:py-20 md:py-28">
-        <div className="mx-auto max-w-[1920px] rounded-[1.5rem] bg-stone-100 px-5 py-12 sm:px-8 sm:py-16 md:rounded-[2rem] md:px-14 md:py-20">
+      <section className="bg-stone-50 px-4 py-18 sm:px-8 sm:py-24 md:py-28">
+        <div className="mx-auto max-w-[1920px] rounded-[1.5rem] bg-[linear-gradient(180deg,#171412_0%,#211b18_100%)] px-5 py-12 sm:px-8 sm:py-16 md:rounded-[2rem] md:px-14 md:py-20">
           <div className="grid gap-12 lg:grid-cols-[260px_minmax(0,1fr)] lg:gap-20">
             <div className="lg:pt-2">
               <span className="text-xs font-bold uppercase tracking-[0.4em] text-primary">
                 {label}
               </span>
               <div className="mt-4 h-px w-20 bg-primary opacity-30"></div>
-              <h2 className="font-headline mt-8 text-4xl leading-tight text-stone-950 md:text-6xl">
+              <h2 className="font-headline mt-8 text-4xl leading-tight text-stone-50 md:text-6xl">
                 {title}
               </h2>
-              <p className="mt-6 max-w-sm text-[1rem] leading-7 text-stone-600">
+              <p className="mt-6 max-w-sm text-[1rem] leading-7 text-stone-300">
                 {intro}
               </p>
               <button
-                className="mt-8 rounded-full border border-stone-300 px-6 py-3 text-[11px] font-bold uppercase tracking-[0.28em] text-stone-900 transition-colors hover:border-primary/40 hover:text-primary"
+                className="mt-8 rounded-full border border-white/14 px-6 py-3 text-[11px] font-bold uppercase tracking-[0.28em] text-stone-100 transition-colors hover:border-primary/40 hover:text-primary"
                 type="button"
                 onClick={() => setIsOpen(true)}
               >
@@ -83,14 +83,14 @@ export function TestimonialsSection({
               {previewItems.map((item) => (
                 <article
                   key={`${item.name}-${item.quote}`}
-                  className="min-w-[85%] snap-start rounded-[1.4rem] border border-stone-200 bg-white p-5 sm:min-w-[70%] sm:p-6 md:min-w-0"
+                  className="min-w-[85%] snap-start rounded-[1.4rem] border border-white/8 bg-white/[0.04] p-5 sm:min-w-[70%] sm:p-6 md:min-w-0"
                 >
-                  <div className="text-3xl leading-none text-primary">"</div>
-                  <p className="mt-4 line-clamp-6 text-[0.98rem] leading-7 text-stone-700">
+                  <div className="text-3xl leading-none text-[#c9a85c]">"</div>
+                  <p className="mt-4 line-clamp-6 text-[0.98rem] leading-7 text-stone-200">
                     {item.quote}
                   </p>
-                  <div className="mt-6 border-t border-stone-200 pt-4">
-                    <div className="text-[0.95rem] font-semibold text-stone-950">
+                  <div className="mt-6 border-t border-white/8 pt-4">
+                    <div className="text-[0.95rem] font-semibold text-stone-50">
                       {item.name}
                     </div>
                   </div>

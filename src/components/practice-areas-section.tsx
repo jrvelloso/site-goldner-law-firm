@@ -58,7 +58,7 @@ export function PracticeAreasSection({
 
   return (
     <>
-      <section id="atuacao" className="bg-stone-100 px-4 py-16 sm:px-8 sm:py-20 md:py-24">
+      <section id="atuacao" className="bg-stone-100 px-4 py-18 sm:px-8 sm:py-24 md:py-28">
         <div className="mx-auto grid max-w-7xl gap-14 md:px-12 lg:grid-cols-[240px_minmax(0,1fr)] lg:gap-20 lg:px-20">
           <div className="lg:pt-2">
             <span className="text-xs font-bold uppercase tracking-[0.4em] text-primary">
@@ -66,11 +66,11 @@ export function PracticeAreasSection({
             </span>
             <div className="mt-4 h-px w-20 bg-primary opacity-30"></div>
           </div>
-          <div className="-mx-4 flex snap-x snap-mandatory gap-4 overflow-x-auto px-4 pb-2 md:mx-0 md:grid md:grid-cols-2 md:gap-x-10 md:overflow-visible md:px-0 md:pb-0">
+          <div className="-mx-4 flex snap-x snap-mandatory gap-4 overflow-x-auto px-4 pb-2 md:mx-0 md:grid md:grid-cols-2 md:gap-x-12 md:overflow-visible md:px-0 md:pb-0">
             {items.map((item, index) => (
               <button
                 key={item.title}
-                className="group min-w-[82%] snap-start rounded-[1.4rem] border border-stone-200 bg-stone-50 p-5 text-left md:min-w-0 md:rounded-none md:border-0 md:border-t md:bg-transparent md:px-0 md:py-8 md:first:pt-0 md:[&:nth-child(-n+2)]:pt-0"
+                className="group min-w-[82%] snap-start rounded-[1.4rem] border border-stone-200 bg-stone-50 p-5 text-left shadow-[0_18px_40px_rgba(15,23,42,0.04)] md:min-w-0 md:rounded-none md:border-0 md:border-t md:bg-transparent md:px-0 md:py-9 md:shadow-none md:first:pt-0 md:[&:nth-child(-n+2)]:pt-0"
                 type="button"
                 onClick={() => setActiveIndex(index)}
               >
@@ -78,7 +78,7 @@ export function PracticeAreasSection({
                   <span className="min-w-8 pt-1 text-[10px] font-bold uppercase tracking-[0.28em] text-stone-300 sm:text-[11px] sm:tracking-[0.32em]">
                     {String(index + 1).padStart(2, "0")}
                   </span>
-                  <h3 className="font-headline text-[1.4rem] leading-tight text-stone-950 transition-colors duration-300 group-hover:text-primary sm:text-[1.55rem] md:text-[1.95rem]">
+                  <h3 className="font-headline text-[1.4rem] leading-tight text-stone-950 transition-colors duration-300 group-hover:text-primary sm:text-[1.55rem] md:text-[2rem]">
                     {item.title}
                   </h3>
                 </div>

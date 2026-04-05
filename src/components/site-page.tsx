@@ -184,8 +184,8 @@ export function SitePage({ locale, copy }: SitePageProps) {
 
   return (
     <>
-      <nav className="fixed top-0 z-50 w-full border-b border-white/8 bg-stone-950/88 shadow-sm transition-opacity duration-300 backdrop-blur-xl">
-        <div className="mx-auto flex w-full max-w-[1920px] items-center justify-between gap-4 px-4 py-4 sm:px-6 md:px-8 md:py-5">
+      <nav className="fixed top-0 z-50 w-full border-b border-white/7 bg-stone-950/88 transition-opacity duration-300 backdrop-blur-xl">
+        <div className="mx-auto flex w-full max-w-[1920px] items-center justify-between gap-3 px-4 py-3 sm:px-6 md:px-10 md:py-5">
           <Link
             href="/"
             aria-label="Goldner & Dias Paes Advocacia home"
@@ -194,21 +194,21 @@ export function SitePage({ locale, copy }: SitePageProps) {
             <Image
               src={headerLogo}
               alt="Goldner & Dias Paes Advocacia"
-              className="h-auto w-36 object-contain sm:w-40 md:w-60"
+              className="h-auto w-28 object-contain sm:w-40 md:w-60"
               priority
             />
           </Link>
-          <div className="hidden items-center gap-10 md:flex">
-            <Link className="text-xs font-bold uppercase tracking-[0.22em] !text-[#d7d0c3] transition-colors duration-300 hover:!text-[#f0cb7d]" href="#sobre">
+          <div className="hidden items-center gap-9 lg:flex">
+            <Link className="text-[11px] font-bold uppercase tracking-[0.24em] !text-[#d7d0c3] transition-colors duration-300 hover:!text-[#f0cb7d]" href="#sobre">
               {copy.nav.about}
             </Link>
-            <Link className="text-xs font-bold uppercase tracking-[0.22em] !text-[#d7d0c3] transition-colors duration-300 hover:!text-[#f0cb7d]" href="#atuacao">
+            <Link className="text-[11px] font-bold uppercase tracking-[0.24em] !text-[#d7d0c3] transition-colors duration-300 hover:!text-[#f0cb7d]" href="#atuacao">
               {copy.nav.practices}
             </Link>
-            <Link className="text-xs font-bold uppercase tracking-[0.22em] !text-[#d7d0c3] transition-colors duration-300 hover:!text-[#f0cb7d]" href="#equipe">
+            <Link className="text-[11px] font-bold uppercase tracking-[0.24em] !text-[#d7d0c3] transition-colors duration-300 hover:!text-[#f0cb7d]" href="#equipe">
               {copy.nav.team}
             </Link>
-            <Link className="text-xs font-bold uppercase tracking-[0.22em] !text-[#d7d0c3] transition-colors duration-300 hover:!text-[#f0cb7d]" href="#contato">
+            <Link className="text-[11px] font-bold uppercase tracking-[0.24em] !text-[#d7d0c3] transition-colors duration-300 hover:!text-[#f0cb7d]" href="#contato">
               {copy.nav.contact}
             </Link>
           </div>
@@ -222,7 +222,7 @@ export function SitePage({ locale, copy }: SitePageProps) {
               href={whatsappHref}
               target="_blank"
               rel="noreferrer"
-              className="flex items-center gap-2 rounded-full bg-primary px-4 py-2.5 text-[10px] font-bold uppercase tracking-[0.22em] !text-white transition-all duration-200 hover:opacity-80 active:scale-95 sm:px-6 sm:text-xs sm:tracking-widest md:px-8 md:py-3"
+              className="flex items-center gap-2 rounded-full bg-primary px-4 py-2.5 text-[10px] font-bold uppercase tracking-[0.18em] !text-white transition-all duration-200 hover:opacity-80 active:scale-95 sm:px-6 sm:text-xs sm:tracking-widest md:px-8 md:py-3"
             >
               <span className="hidden sm:inline">{copy.nav.consultation}</span>
               <span className="sm:hidden">Contato</span>
@@ -233,7 +233,7 @@ export function SitePage({ locale, copy }: SitePageProps) {
       </nav>
 
       <main>
-        <section className="relative flex min-h-[820px] items-center overflow-hidden sm:min-h-[860px]">
+        <section className="relative flex min-h-[760px] items-center overflow-hidden sm:min-h-[860px]">
           <div className="absolute inset-0">
             <Image
               className="h-full w-full object-cover"
@@ -247,64 +247,64 @@ export function SitePage({ locale, copy }: SitePageProps) {
             <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(8,8,8,0.94)_0%,rgba(10,10,10,0.82)_46%,rgba(10,10,10,0.58)_100%)]"></div>
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_72%_44%,rgba(201,168,92,0.06),transparent_24%)]"></div>
           </div>
-          <div className="pointer-events-none absolute right-[6%] top-1/2 hidden -translate-y-1/2 lg:block">
+          <div className="pointer-events-none absolute right-[5%] top-1/2 hidden -translate-y-1/2 lg:block">
             <Image
               src={logo}
               alt=""
-              className="h-auto w-[380px] object-contain"
+              className="h-auto w-[400px] object-contain"
               priority
             />
           </div>
-          <div className="relative z-10 mx-auto w-full max-w-[1440px] px-4 pt-24 sm:px-6 sm:pt-28 md:px-12 md:pt-36 lg:px-20">
+          <div className="relative z-10 mx-auto w-full max-w-[1440px] px-4 pb-10 pt-20 sm:px-6 sm:pb-0 sm:pt-28 md:px-12 md:pt-36 lg:px-20">
             <div className="max-w-[760px]">
-              <div className="mb-6 inline-flex rounded-[1.25rem] border border-white/8 bg-black/18 p-3 backdrop-blur-sm sm:mb-8 sm:p-4 lg:hidden">
+              <div className="mb-5 inline-flex rounded-[1.15rem] border border-white/8 bg-black/18 p-2.5 backdrop-blur-sm sm:mb-8 sm:p-4 lg:hidden">
                 <Image
                   src={logo}
                   alt="Goldner & Dias Paes Advocacia"
-                  className="h-auto w-36 object-contain opacity-[0.9] sm:w-44"
+                  className="h-auto w-32 object-contain opacity-[0.94] sm:w-44"
                   priority
                 />
               </div>
-              <div className="inline-flex max-w-full items-center gap-3 border-b border-[#c7a35a]/28 pb-3 text-[9px] font-bold uppercase tracking-[0.24em] text-[#dcc28a] sm:text-[10px] sm:tracking-[0.34em] md:text-[11px]">
+              <div className="inline-flex max-w-full items-center gap-2.5 border-b border-[#c7a35a]/28 pb-3 text-[9px] font-bold uppercase tracking-[0.18em] text-[#dcc28a] sm:text-[10px] sm:tracking-[0.34em] md:text-[11px]">
                 <span className="h-1.5 w-1.5 rounded-full bg-[#c9a85c]"></span>
                 <span className="truncate">{heroText.eyebrow}</span>
               </div>
-              <div className="mt-6 max-w-[720px] sm:mt-8">
+              <div className="mt-7 max-w-[720px] sm:mt-9">
                 <h1
-                  className="font-headline text-kern-tight text-[2.7rem] leading-[0.96] font-medium tracking-[-0.03em] text-stone-50 sm:text-[3.25rem] md:text-[4.2rem] lg:text-[4.85rem]"
+                  className="font-headline text-kern-tight text-[2.55rem] leading-[0.96] font-medium tracking-[-0.03em] text-stone-50 sm:text-[3.5rem] md:text-[4.45rem] lg:text-[5.15rem]"
                   dangerouslySetInnerHTML={{ __html: heroText.title }}
                 />
               </div>
-              <p className="mt-6 max-w-[660px] text-[1rem] leading-8 text-stone-200/92 sm:mt-8 sm:text-[1.06rem] md:text-[1.14rem]">
+              <p className="mt-6 max-w-[34rem] text-[0.98rem] leading-8 text-stone-200/92 sm:mt-9 sm:text-[1.08rem] md:text-[1.16rem]">
                 {heroText.body}
               </p>
-              <div className="mt-8 flex flex-col gap-3 sm:mt-10 sm:flex-row sm:flex-wrap sm:gap-4">
+              <div className="mt-8 flex flex-col gap-3 sm:mt-11 sm:flex-row sm:flex-wrap sm:gap-4">
                 <a
                   href={whatsappHref}
                   target="_blank"
                   rel="noreferrer"
-                  className="flex items-center justify-center gap-3 rounded-full bg-primary px-7 py-4 text-center text-sm font-bold uppercase tracking-[0.16em] !text-white transition-all hover:opacity-90 sm:justify-start sm:px-9"
+                  className="flex min-h-14 items-center justify-center gap-3 rounded-full bg-primary px-6 py-4 text-center text-[13px] font-bold uppercase tracking-[0.16em] !text-white transition-all hover:opacity-90 sm:min-h-0 sm:justify-start sm:px-9 sm:text-sm"
                 >
                   <span>{heroText.primaryCta}</span>
                   <span className="h-1.5 w-1.5 rounded-full bg-white"></span>
                 </a>
                 <a
                   href="#atuacao"
-                  className="rounded-full !border !border-white/35 !bg-white/8 px-7 py-4 text-center text-sm font-bold uppercase tracking-[0.16em] !text-[#f4efe4] shadow-[inset_0_0_0_1px_rgba(255,255,255,0.05)] transition-all hover:!border-white/50 hover:!bg-white/12 sm:px-9"
+                  className="flex min-h-14 items-center justify-center rounded-full !border !border-white/35 !bg-white/8 px-6 py-4 text-center text-[13px] font-bold uppercase tracking-[0.14em] !text-[#f4efe4] shadow-[inset_0_0_0_1px_rgba(255,255,255,0.05)] transition-all hover:!border-white/50 hover:!bg-white/12 sm:min-h-0 sm:px-9 sm:text-sm sm:tracking-[0.16em]"
                 >
                   {heroText.secondaryCta}
                 </a>
               </div>
-              <div className="mt-10 grid max-w-[980px] grid-cols-1 gap-4 sm:mt-14 md:grid-cols-3">
+              <div className="mt-10 grid max-w-[980px] grid-cols-1 gap-4 sm:mt-16 md:grid-cols-3">
                 {heroContent.map((item) => (
                   <div
                     key={item.label}
-                    className="rounded-[1.4rem] border border-white/10 bg-black/26 px-6 py-6 backdrop-blur-md"
+                    className="rounded-[1.5rem] border border-white/10 bg-black/24 px-5 py-5 shadow-[0_20px_50px_rgba(0,0,0,0.14)] backdrop-blur-md sm:px-6 sm:py-6"
                   >
                     <div className="text-[10px] font-bold uppercase tracking-[0.34em] text-[#d1ae67]">
                       {item.label}
                     </div>
-                    <div className="mt-4 text-[0.98rem] leading-7 text-stone-100/92">
+                    <div className="mt-3 text-[0.97rem] leading-7 text-stone-100/92 sm:mt-4">
                       {item.body}
                     </div>
                   </div>
@@ -314,8 +314,8 @@ export function SitePage({ locale, copy }: SitePageProps) {
           </div>
         </section>
 
-        <section id="sobre" className="bg-stone-50 px-4 py-16 sm:px-8 sm:py-20 md:py-28">
-          <div className="mx-auto grid max-w-7xl gap-14 md:px-12 lg:grid-cols-[240px_minmax(0,1fr)] lg:gap-20 lg:px-20">
+        <section id="sobre" className="bg-stone-50 px-4 py-16 sm:px-8 sm:py-24 md:py-32">
+          <div className="mx-auto grid max-w-7xl gap-10 md:px-12 lg:grid-cols-[240px_minmax(0,1fr)] lg:gap-20 lg:px-20">
             <div className="lg:pt-2">
               <span className="text-xs font-bold uppercase tracking-[0.4em] text-primary">
                 {officeSection.label}
@@ -327,18 +327,18 @@ export function SitePage({ locale, copy }: SitePageProps) {
                 {officeSection.paragraphs.map((paragraph) => (
                   <p
                     key={paragraph}
-                    className="text-[1.05rem] leading-8 text-stone-700 md:text-[1.12rem]"
+                    className="text-[1rem] leading-8 text-stone-700 md:text-[1.14rem]"
                   >
                     {paragraph}
                   </p>
                 ))}
               </div>
 
-              <div className="mt-10 grid grid-cols-1 gap-4 sm:mt-14 md:grid-cols-2">
+              <div className="mt-10 grid grid-cols-1 gap-4 sm:mt-16 md:grid-cols-2">
                 {officeSection.values.map((item) => (
                   <div
                     key={item.title}
-                    className="rounded-[1.5rem] border border-stone-200 bg-stone-50 px-6 py-6"
+                    className="rounded-[1.6rem] border border-stone-200 bg-white px-6 py-6 shadow-[0_18px_40px_rgba(15,23,42,0.04)]"
                   >
                     <div className="text-[10px] font-bold uppercase tracking-[0.34em] text-primary">
                       {item.title}
@@ -360,8 +360,8 @@ export function SitePage({ locale, copy }: SitePageProps) {
           locale={locale}
         />
 
-        <section id="equipe" className="bg-stone-900 px-4 py-12 sm:px-8 sm:py-16">
-          <div className="mx-auto max-w-[1920px] overflow-hidden rounded-xl px-5 py-10 sm:px-8 sm:py-16 md:px-20">
+        <section id="equipe" className="bg-stone-900 px-4 py-14 sm:px-8 sm:py-18">
+          <div className="mx-auto max-w-7xl px-0 md:px-12 lg:px-20">
             <div className="mb-12 text-center md:text-left">
               <span className="text-xs font-bold uppercase tracking-[0.4em] text-stone-500">
                 {copy.team.label}
@@ -370,25 +370,37 @@ export function SitePage({ locale, copy }: SitePageProps) {
                 {copy.team.title}
               </h2>
             </div>
-            <div className="grid grid-cols-1 gap-8 md:gap-10">
+            <div className="grid grid-cols-1 gap-8">
               {copy.team.members.map((member) => (
-                <div key={member.name} className="group mx-auto w-full max-w-[340px]">
-                  <div className="relative mb-5 aspect-[4/5] overflow-hidden rounded-lg">
-                    <Image
-                      className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
-                      src={member.image.src}
-                      alt={member.image.alt}
-                      fill
-                      sizes="(max-width: 768px) 100vw, 33vw"
-                    />
+                <article
+                  key={member.name}
+                  className="group overflow-hidden rounded-[1.8rem] border border-white/8 bg-white/[0.03] shadow-[0_24px_70px_rgba(0,0,0,0.18)]"
+                >
+                  <div className="grid items-center gap-0 md:grid-cols-[340px_minmax(0,1fr)]">
+                    <div className="relative aspect-[4/5] overflow-hidden bg-stone-800/70 md:h-full md:aspect-auto">
+                      <Image
+                        className="h-full w-full object-contain object-center transition-transform duration-700 group-hover:scale-[1.02]"
+                        src={member.image.src}
+                        alt={member.image.alt}
+                        fill
+                        sizes="(max-width: 768px) 100vw, 340px"
+                      />
+                    </div>
+                    <div className="px-5 py-6 sm:px-8 md:px-10">
+                      <span className="text-[10px] font-bold uppercase tracking-[0.34em] text-[#d1ae67]">
+                        {member.role}
+                      </span>
+                      <h3 className="font-headline mt-4 text-[2.35rem] leading-[0.98] text-stone-50 md:text-5xl">
+                        {member.name}
+                      </h3>
+                      <p className="mt-4 max-w-2xl text-[0.98rem] leading-7 text-stone-300 md:mt-5 md:text-[1.05rem] md:leading-8">
+                        {locale === "pt-BR"
+                          ? "Atuação orientada por estratégia, rigor técnico e acompanhamento próximo em estruturas empresariais, patrimoniais e sucessórias."
+                          : "Practice guided by strategy, technical rigor, and close counsel across corporate, wealth, and succession structures."}
+                      </p>
+                    </div>
                   </div>
-                  <h4 className="font-headline mb-1 text-lg text-stone-50 md:text-xl">
-                    {member.name}
-                  </h4>
-                  <span className="text-[10px] font-bold uppercase tracking-widest text-stone-500">
-                    {member.role}
-                  </span>
-                </div>
+                </article>
               ))}
             </div>
           </div>
@@ -405,7 +417,7 @@ export function SitePage({ locale, copy }: SitePageProps) {
         <section id="contato" className="bg-stone-950 px-4 py-20 text-center sm:px-8 sm:py-24 md:py-32">
           <div className="mx-auto max-w-4xl">
             <h2
-              className="font-headline mb-12 text-4xl text-stone-50 md:text-6xl"
+              className="font-headline mb-10 text-4xl text-stone-50 md:text-6xl"
               dangerouslySetInnerHTML={{ __html: copy.consultation.title }}
             />
             <div className="flex items-center justify-center">
@@ -423,17 +435,17 @@ export function SitePage({ locale, copy }: SitePageProps) {
         </section>
       </main>
 
-      <footer className="w-full bg-stone-100 pb-10 pt-16 sm:pt-20">
-        <div className="mx-auto grid max-w-7xl grid-cols-1 gap-12 px-4 sm:px-8 md:grid-cols-4 md:px-20">
+      <footer className="w-full bg-stone-100 pb-10 pt-14 sm:pt-20">
+        <div className="mx-auto grid max-w-7xl grid-cols-1 gap-10 px-4 sm:px-8 md:grid-cols-4 md:gap-10 md:px-20">
           <div className="space-y-6">
             <Link href="/" aria-label="Goldner & Dias Paes home" className="inline-block">
               <Image
                 src={logo}
                 alt="Goldner & Dias Paes Advocacia"
-                className="h-auto w-[240px]"
+                className="h-auto w-[170px] sm:w-[240px]"
               />
             </Link>
-            <p className="max-w-xs text-[0.95rem] leading-7 text-stone-600">
+            <p className="max-w-[20rem] text-[0.95rem] leading-7 text-stone-600">
               {copy.footer.description}
             </p>
           </div>
@@ -461,7 +473,7 @@ export function SitePage({ locale, copy }: SitePageProps) {
             <h4 className="text-[11px] font-bold uppercase tracking-[0.34em] text-stone-500">
               {copy.footer.locationsLabel}
             </h4>
-            <ul className="space-y-5">
+            <ul className="space-y-6">
               {copy.locations.items.map((location) => (
                 <li key={location.city} className="text-[0.92rem] leading-6 text-stone-500">
                   <p className="font-headline text-[1.25rem] leading-tight text-stone-900">
@@ -516,10 +528,23 @@ export function SitePage({ locale, copy }: SitePageProps) {
             </ul>
           </div>
         </div>
-        <div className="mx-auto mt-16 flex max-w-7xl flex-col items-center justify-between gap-6 border-t border-stone-200 px-4 pt-8 text-center sm:px-8 md:mt-20 md:flex-row md:px-20 md:text-left">
-          <p className="text-[10px] font-bold uppercase tracking-[0.26em] text-stone-400">
-            {copy.footer.copyright}
-          </p>
+        <div className="mx-auto mt-14 flex max-w-7xl flex-col items-center justify-between gap-6 border-t border-stone-200 px-4 pt-8 text-center sm:px-8 md:mt-20 md:flex-row md:px-20 md:text-left">
+          <div className="space-y-2">
+            <p className="text-[10px] font-bold uppercase tracking-[0.26em] text-stone-400">
+              {copy.footer.copyright}
+            </p>
+            <p className="text-[10px] uppercase tracking-[0.22em] text-stone-400">
+              Made by{" "}
+              <a
+                href="https://perolamagnetizante.pt"
+                target="_blank"
+                rel="noreferrer"
+                className="font-bold text-stone-500 transition-colors hover:text-stone-900"
+              >
+                perolamagnetizante.pt
+              </a>
+            </p>
+          </div>
           <div className="flex flex-wrap justify-center gap-6 md:justify-end md:gap-8">
             <Link
               className="text-[10px] font-bold uppercase tracking-[0.26em] text-stone-400 hover:text-stone-900"
