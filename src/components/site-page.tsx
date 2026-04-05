@@ -137,9 +137,7 @@ export function SitePage({ locale, copy }: SitePageProps) {
                   href="#"
                 >
                   {copy.practiceAreas.learnMore}
-                  <span className="material-symbols-outlined text-sm">
-                    arrow_forward
-                  </span>
+                  <span className="text-sm">-&gt;</span>
                 </Link>
               </div>
             ))}

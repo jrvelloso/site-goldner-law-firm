@@ -90,31 +90,31 @@ export const locales: Record<Locale, SiteCopy> = {
     language: { pt: "PT", en: "EN" },
     nav: {
       about: "SOBRE",
-      practices: "ATUAÇÃO",
+      practices: "ATUA\u00c7\u00c3O",
       team: "EQUIPE",
       contact: "CONTATO",
       consultation: "Consultoria",
     },
     hero: {
       title:
-        'Clareza Jurídica, <br /><span class="font-light italic">Profunda</span> Resiliência.',
+        'Clareza Jur\u00eddica, <br /><span class="font-light italic">Profunda</span> Resili\u00eancia.',
       body:
-        "Uma experiência jurídica sob medida para navegar as complexidades dos cenários corporativos brasileiros e internacionais com precisão cirúrgica e visão estratégica.",
-      primaryCta: "Explorar Atuação",
+        "Uma experi\u00eancia jur\u00eddica sob medida para navegar as complexidades dos cen\u00e1rios corporativos brasileiros e internacionais com precis\u00e3o cir\u00fargica e vis\u00e3o estrat\u00e9gica.",
+      primaryCta: "Explorar Atua\u00e7\u00e3o",
       secondaryCta: "Agendar Consultoria",
       image: {
         src: sharedImages.hero,
         alt:
-          "Interior arquitetônico sóbrio de uma biblioteca moderna com madeira escura e iluminação ambiente suave.",
+          "Interior arquitet\u00f4nico s\u00f3brio de uma biblioteca moderna com madeira escura e ilumina\u00e7\u00e3o ambiente suave.",
       },
     },
     feature: {
-      title: "Proteção Estratégica.",
-      meta: "Desde 2018 / São Paulo",
+      title: "Prote\u00e7\u00e3o Estrat\u00e9gica.",
+      meta: "Desde 2018 / S\u00e3o Paulo",
       image: {
         src: sharedImages.feature,
         alt:
-          "Escritório moderno com janelas do chão ao teto e vista para o skyline da cidade ao pôr do sol.",
+          "Escrit\u00f3rio moderno com janelas do ch\u00e3o ao teto e vista para o skyline da cidade ao p\u00f4r do sol.",
       },
     },
     practiceAreas: {
@@ -122,57 +122,57 @@ export const locales: Record<Locale, SiteCopy> = {
       learnMore: "Saiba Mais",
       items: [
         {
-          title: "Saúde & Médica",
-          body: "Defesa jurídica e estratégias de compliance sob medida para profissionais da saúde e instituições médicas em toda a América Latina.",
+          title: "Sa\u00fade & M\u00e9dica",
+          body: "Defesa jur\u00eddica e estrat\u00e9gias de compliance sob medida para profissionais da sa\u00fade e institui\u00e7\u00f5es m\u00e9dicas em toda a Am\u00e9rica Latina.",
         },
         {
-          title: "Mercado Imobiliário",
-          body: "Segurança jurídica em aquisições de alto valor, normas urbanísticas e contratos complexos de desenvolvimento.",
+          title: "Mercado Imobili\u00e1rio",
+          body: "Seguran\u00e7a jur\u00eddica em aquisi\u00e7\u00f5es de alto valor, normas urban\u00edsticas e contratos complexos de desenvolvimento.",
         },
         {
-          title: "Proteção Patrimonial",
-          body: "Estruturas sofisticadas de blindagem de ativos e preservação patrimonial para indivíduos e family offices.",
+          title: "Prote\u00e7\u00e3o Patrimonial",
+          body: "Estruturas sofisticadas de blindagem de ativos e preserva\u00e7\u00e3o patrimonial para indiv\u00edduos e family offices.",
         },
         {
-          title: "Planejamento Tributário",
-          body: "Otimização tributária internacional e conformidade doméstica para arquiteturas societárias complexas.",
+          title: "Planejamento Tribut\u00e1rio",
+          body: "Otimiza\u00e7\u00e3o tribut\u00e1ria internacional e conformidade dom\u00e9stica para arquiteturas societ\u00e1rias complexas.",
         },
         {
-          title: "Sucessões & Herança",
-          body: "Continuidade geracional por meio de instrumentos jurídicos precisos e orientação sensível.",
+          title: "Sucess\u00f5es & Heran\u00e7a",
+          body: "Continuidade geracional por meio de instrumentos jur\u00eddicos precisos e orienta\u00e7\u00e3o sens\u00edvel.",
         },
         {
-          title: "Direito Societário",
-          body: "M&A, governança e assessoria estrutural para empresas em expansão e grupos já consolidados.",
+          title: "Direito Societ\u00e1rio",
+          body: "M&A, governan\u00e7a e assessoria estrutural para empresas em expans\u00e3o e grupos j\u00e1 consolidados.",
         },
       ],
     },
     team: {
-      label: "Sócios & Conselheiros",
-      title: "Guiados pela Estratégia",
+      label: "S\u00f3cios & Conselheiros",
+      title: "Guiados pela Estrat\u00e9gia",
       members: [
         {
           name: "Bruno Goldner",
-          role: "Sócio Sênior / M&A",
+          role: "S\u00f3cio S\u00eanior / M&A",
           image: {
             src: sharedImages.bruno,
-            alt: "Retrato profissional de Bruno Goldner, um homem maduro em terno sob medida com expressão confiante.",
+            alt: "Retrato profissional de Bruno Goldner, um homem maduro em terno sob medida com express\u00e3o confiante.",
           },
         },
         {
           name: "Helena Moreira",
-          role: "Líder Jurídica / Tributário",
+          role: "L\u00edder Jur\u00eddica / Tribut\u00e1rio",
           image: {
             src: sharedImages.helena,
-            alt: "Retrato profissional de Helena Moreira, uma mulher sofisticada em traje executivo contemporâneo.",
+            alt: "Retrato profissional de Helena Moreira, uma mulher sofisticada em traje executivo contempor\u00e2neo.",
           },
         },
         {
           name: "Dias Paes",
-          role: "Sócio / Gestão Patrimonial",
+          role: "S\u00f3cio / Gest\u00e3o Patrimonial",
           image: {
             src: sharedImages.dias,
-            alt: "Retrato profissional de Dias Paes, advogado especialista em terno azul-marinho contra fundo arquitetônico neutro.",
+            alt: "Retrato profissional de Dias Paes, advogado especialista em terno azul-marinho contra fundo arquitet\u00f4nico neutro.",
           },
         },
       ],
@@ -185,23 +185,23 @@ export const locales: Record<Locale, SiteCopy> = {
     },
     footer: {
       description:
-        "Representação jurídica de alto nível para clientes privados e corporações. Excelência conduzida por visão estratégica desde 2018.",
+        "Representa\u00e7\u00e3o jur\u00eddica de alto n\u00edvel para clientes privados e corpora\u00e7\u00f5es. Excel\u00eancia conduzida por vis\u00e3o estrat\u00e9gica desde 2018.",
       connectLabel: "Conecte-se",
-      briefs: "Boletins Jurídicos",
+      briefs: "Boletins Jur\u00eddicos",
       press: "Assessoria de Imprensa",
-      locationsLabel: "Localizações",
+      locationsLabel: "Localiza\u00e7\u00f5es",
       locations: [
         {
           address: "Av. Faria Lima, 4500",
-          city: "São Paulo, SP - Brasil",
+          city: "S\u00e3o Paulo, SP - Brasil",
         },
         {
-          address: "Rue du Rhône, 14",
-          city: "Genebra, Suíça",
+          address: "Rue du Rh\u00f4ne, 14",
+          city: "Genebra, Su\u00ed\u00e7a",
         },
       ],
-      copyright: "© 2026 Goldner Law Firm. TODOS OS DIREITOS RESERVADOS.",
-      privacy: "POLÍTICA DE PRIVACIDADE",
+      copyright: "\u00a9 2026 Goldner Law Firm. TODOS OS DIREITOS RESERVADOS.",
+      privacy: "POL\u00cdTICA DE PRIVACIDADE",
       terms: "TERMOS LEGAIS",
     },
   },
@@ -229,7 +229,7 @@ export const locales: Record<Locale, SiteCopy> = {
     },
     feature: {
       title: "Strategic Protection.",
-      meta: "Est. 2018 / São Paulo",
+      meta: "Est. 2018 / S\u00e3o Paulo",
       image: {
         src: sharedImages.feature,
         alt:
@@ -312,14 +312,14 @@ export const locales: Record<Locale, SiteCopy> = {
       locations: [
         {
           address: "Av. Faria Lima, 4500",
-          city: "São Paulo, SP - Brazil",
+          city: "S\u00e3o Paulo, SP - Brazil",
         },
         {
-          address: "Rue du Rhône, 14",
+          address: "Rue du Rh\u00f4ne, 14",
           city: "Geneva, Switzerland",
         },
       ],
-      copyright: "© 2026 Goldner Law Firm. ALL RIGHTS RESERVED.",
+      copyright: "\u00a9 2026 Goldner Law Firm. ALL RIGHTS RESERVED.",
       privacy: "PRIVACY POLICY",
       terms: "LEGAL TERMS",
     },
