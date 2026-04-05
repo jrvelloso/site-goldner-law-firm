@@ -14,9 +14,9 @@ const newsreader = Newsreader({
 });
 
 export const metadata: Metadata = {
-  title: "Goldner Law",
+  title: "Goldner & Dias Paes Advocacia",
   description:
-    "Goldner Law Firm delivers strategic legal counsel across corporate, tax, wealth protection, real estate, and succession matters.",
+    "Goldner & Dias Paes Advocacia delivers strategic legal counsel across corporate, tax, wealth protection, real estate, and succession matters.",
 };
 
 export default function RootLayout({

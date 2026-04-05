@@ -4,7 +4,7 @@ import { SitePage } from "@/components/site-page";
 import { locales } from "@/content/site-copy";
 
 export const metadata: Metadata = {
-  title: "Goldner Law",
+  title: "Goldner & Dias Paes Advocacia",
   description:
     "Representação jurídica de alto nível para clientes privados e corporações, com atuação estratégica no Brasil e no exterior.",
 };
