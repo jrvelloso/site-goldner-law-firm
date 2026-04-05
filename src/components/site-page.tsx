@@ -5,6 +5,7 @@ import headerLogo from "@/app/assets/header_logo.svg";
 import logo from "@/app/assets/logo.png";
 import whatsappIcon from "@/app/assets/whatsapp.png";
 import { LanguageSwitcher } from "@/components/language-switcher";
+import { PartnersSection } from "@/components/partners-section";
 import { PracticeAreasSection } from "@/components/practice-areas-section";
 import { TestimonialsSection } from "@/components/testimonials-section";
 import type { Locale, SiteCopy } from "@/content/site-copy";
@@ -413,6 +414,8 @@ export function SitePage({ locale, copy }: SitePageProps) {
           items={testimonials.items}
           locale={locale}
         />
+
+        <PartnersSection locale={locale} />
 
         <section id="contato" className="bg-stone-950 px-4 py-20 text-center sm:px-8 sm:py-24 md:py-32">
           <div className="mx-auto max-w-4xl">
