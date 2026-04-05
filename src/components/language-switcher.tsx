@@ -22,7 +22,7 @@ export function LanguageSwitcher({
       <Link
         href="/"
         className={`rounded-full px-3 py-2 transition-colors ${
-          locale === "pt-BR" ? "bg-primary text-white" : "text-stone-400"
+          locale === "pt-BR" ? "bg-primary !text-white" : "text-stone-400"
         }`}
         aria-current={!isEnglishPath ? "page" : undefined}
       >
@@ -31,7 +31,7 @@ export function LanguageSwitcher({
       <Link
         href="/en"
         className={`rounded-full px-3 py-2 transition-colors ${
-          locale === "en" ? "bg-primary text-white" : "text-stone-400"
+          locale === "en" ? "bg-primary !text-white" : "text-stone-400"
         }`}
         aria-current={isEnglishPath ? "page" : undefined}
       >
