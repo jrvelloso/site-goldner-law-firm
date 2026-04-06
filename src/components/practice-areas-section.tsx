@@ -41,17 +41,17 @@ export function PracticeAreasSection({ locale }: PracticeAreasSectionProps) {
                 {content.sectionLabel}
               </span>
               <div className="mt-4 h-px w-20 bg-primary opacity-30"></div>
-              <p className="mt-8 max-w-[15rem] text-sm leading-7 text-[rgba(41,45,69,0.58)]">
+              <p className="mt-8 max-w-[15rem] text-[0.98rem] leading-7 text-[rgba(41,45,69,0.58)]">
                 {content.listHint}
               </p>
             </div>
 
             <div>
               <div className="max-w-4xl">
-                <h2 className="font-headline max-w-3xl text-4xl leading-[1.02] text-[#292d45] md:text-5xl">
+                <h2 className="font-headline max-w-3xl text-4xl leading-[1.04] text-[#292d45] text-balance md:text-5xl">
                   {content.sectionTitle}
                 </h2>
-                <p className="mt-6 max-w-3xl text-[1rem] leading-8 text-[rgba(41,45,69,0.72)] md:text-[1.08rem]">
+                <p className="mt-6 max-w-3xl text-[1.02rem] leading-8 text-[rgba(41,45,69,0.72)] md:text-[1.08rem]">
                   {content.sectionIntro}
                 </p>
               </div>
@@ -67,22 +67,22 @@ export function PracticeAreasSection({ locale }: PracticeAreasSectionProps) {
                     >
                       <div className="flex items-start justify-between gap-4">
                         <div>
-                          <div className="text-[10px] font-bold uppercase tracking-[0.34em] text-[#7a776d]">
+                          <div className="text-[11px] font-bold uppercase tracking-[0.22em] text-[#7a776d]">
                             {item.eyebrow}
                           </div>
-                          <h3 className="font-headline mt-4 max-w-[18rem] text-[1.5rem] leading-[1.05] text-[#292d45] transition-colors duration-300 group-hover:text-primary sm:text-[1.75rem]">
+                          <h3 className="font-headline mt-4 max-w-[18rem] text-[1.65rem] leading-[1.08] text-[#292d45] text-balance transition-colors duration-300 group-hover:text-primary sm:text-[1.9rem]">
                             {item.title}
                           </h3>
                         </div>
-                        <span className="pt-1 text-[10px] font-bold uppercase tracking-[0.32em] text-[rgba(122,119,109,0.5)]">
+                        <span className="pt-1 text-[11px] font-bold uppercase tracking-[0.2em] text-[rgba(122,119,109,0.5)]">
                           {String(index + 1).padStart(2, "0")}
                         </span>
                       </div>
 
-                      <p className="mt-5 max-w-[31rem] text-[0.98rem] leading-7 text-[rgba(41,45,69,0.66)]">
+                      <p className="mt-5 max-w-[31rem] text-base leading-8 text-[rgba(41,45,69,0.66)]">
                         {item.overview}
                       </p>
-                      <div className="mt-7 inline-flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.28em] text-[#292d45] transition-colors duration-300 group-hover:text-primary">
+                      <div className="mt-7 inline-flex items-center gap-3 text-xs font-bold uppercase tracking-[0.2em] text-[#292d45] transition-colors duration-300 group-hover:text-primary">
                         <span>{content.learnMore}</span>
                         <span
                           aria-hidden="true"
@@ -103,8 +103,6 @@ export function PracticeAreasSection({ locale }: PracticeAreasSectionProps) {
       <PracticeAreaModal
         area={activeArea}
         locale={locale}
-        institutionalLabel={content.modalInstitutionalLabel}
-        institutionalText={content.modalInstitutionalText}
         overviewLabel={content.modalOverviewLabel}
         closeLabel={content.modalCloseLabel}
         ctaLabel={content.modalCtaLabel}

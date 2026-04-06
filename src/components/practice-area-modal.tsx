@@ -1,15 +1,15 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect, useId, useRef } from "react";
 
+import logo from "@/app/assets/logo.png";
 import type { PracticeArea } from "@/content/practice-areas";
 import type { Locale } from "@/content/site-copy";
 
 type PracticeAreaModalProps = {
   area: PracticeArea | null;
   locale: Locale;
-  institutionalLabel: string;
-  institutionalText: string;
   overviewLabel: string;
   closeLabel: string;
   ctaLabel: string;
@@ -28,8 +28,6 @@ function getFocusableElements(container: HTMLElement) {
 export function PracticeAreaModal({
   area,
   locale,
-  institutionalLabel,
-  institutionalText,
   overviewLabel,
   closeLabel,
   ctaLabel,
@@ -115,19 +113,19 @@ export function PracticeAreaModal({
           <div className="px-5 py-5 sm:px-8 sm:py-7 md:px-10 md:py-10">
             <div className="flex items-start justify-between gap-4 border-b border-[rgba(122,119,109,0.16)] pb-6">
               <div className="pr-4">
-                <div className="text-[10px] font-bold uppercase tracking-[0.34em] text-primary">
+                <div className="text-[11px] font-bold uppercase tracking-[0.22em] text-primary">
                   {area.eyebrow}
                 </div>
                 <h3
                   id={titleId}
-                  className="font-headline mt-4 max-w-2xl text-[2rem] leading-[0.98] text-[#292d45] sm:text-[2.5rem] md:text-[3.35rem]"
+                  className="font-headline mt-4 max-w-2xl text-[2.2rem] leading-[1.01] text-[#292d45] text-balance sm:text-[2.7rem] md:text-[3.35rem]"
                 >
                   {area.title}
                 </h3>
               </div>
               <button
                 ref={closeButtonRef}
-                className="shrink-0 rounded-full border border-[rgba(122,119,109,0.2)] bg-white/75 px-4 py-2 text-[11px] font-bold uppercase tracking-[0.26em] text-[#292d45] transition-colors hover:border-primary/40 hover:text-primary"
+                className="shrink-0 rounded-full border border-[rgba(122,119,109,0.2)] bg-white/75 px-4 py-2 text-xs font-bold uppercase tracking-[0.2em] text-[#292d45] transition-colors hover:border-primary/40 hover:text-primary"
                 type="button"
                 onClick={onClose}
               >
@@ -136,12 +134,12 @@ export function PracticeAreaModal({
             </div>
 
             <div className="pt-6 sm:pt-8">
-              <div className="text-[10px] font-bold uppercase tracking-[0.34em] text-[#7a776d]">
+              <div className="text-[11px] font-bold uppercase tracking-[0.22em] text-[#7a776d]">
                 {overviewLabel}
               </div>
               <p
                 id={descriptionId}
-                className="mt-5 max-w-2xl text-[1rem] leading-8 text-[rgba(41,45,69,0.78)] sm:text-[1.08rem]"
+                className="mt-5 max-w-2xl text-[1.02rem] leading-8 text-[rgba(41,45,69,0.78)] sm:text-[1.08rem]"
               >
                 {area.overview}
               </p>
@@ -154,7 +152,7 @@ export function PracticeAreaModal({
                         key={highlight}
                         className="rounded-[1.25rem] border border-[rgba(122,119,109,0.14)] bg-white/78 px-4 py-4 shadow-[0_10px_26px_rgba(41,45,69,0.06)]"
                       >
-                        <div className="text-sm leading-6 text-[rgba(41,45,69,0.76)]">
+                        <div className="text-[0.98rem] leading-7 text-[rgba(41,45,69,0.76)]">
                           {highlight}
                         </div>
                       </div>
@@ -166,26 +164,29 @@ export function PracticeAreaModal({
           </div>
 
           <aside className="border-t border-[rgba(122,119,109,0.16)] bg-[#292d45] px-5 py-6 text-stone-50 md:border-l md:border-t-0 md:px-7 md:py-10">
-            <div className="sticky top-0">
-              <div className="text-[10px] font-bold uppercase tracking-[0.34em] text-[rgba(207,170,118,0.86)]">
-                {institutionalLabel}
+            <div className="sticky top-0 flex min-h-full flex-col md:min-h-[520px]">
+              <div className="flex justify-center md:pt-4">
+                <Image
+                  src={logo}
+                  alt="Goldner & Dias Paes Advocacia"
+                  className="h-auto w-[180px] object-contain opacity-[0.94]"
+                />
               </div>
-              <p className="mt-6 text-[0.98rem] leading-7 text-[rgba(244,239,228,0.8)]">
-                {institutionalText}
-              </p>
+              <div className="flex flex-1 items-center">
+                <p className="mt-6 text-justify text-base leading-8 text-[rgba(244,239,228,0.8)] md:mt-0">
+                {locale === "pt-BR"
+                  ? "Leitura estratégica, condução técnica e conversa inicial objetiva, com encaminhamento compatível com a natureza da demanda e da especialidade selecionada."
+                  : "Strategic judgement, technical guidance, and an objective first conversation, aligned with both the nature of the matter and the selected practice area."}
+                </p>
+              </div>
               <a
                 href={whatsappHref}
                 target="_blank"
                 rel="noreferrer"
-                className="mt-8 inline-flex min-h-12 w-full items-center justify-center rounded-full bg-primary px-6 py-3 text-center text-[11px] font-bold uppercase tracking-[0.26em] !text-white transition-opacity hover:opacity-90"
+                className="mt-10 inline-flex min-h-12 w-full items-center justify-center rounded-full bg-primary px-6 py-3 text-center text-xs font-bold uppercase tracking-[0.2em] !text-white transition-opacity hover:opacity-90 md:mt-auto"
               >
                 {ctaLabel}
               </a>
-              <p className="mt-5 text-xs leading-6 text-[rgba(244,239,228,0.55)]">
-                {locale === "pt-BR"
-                  ? "Conversa inicial objetiva, com encaminhamento conforme a especialidade selecionada."
-                  : "An objective first conversation, directed according to the selected practice area."}
-              </p>
             </div>
           </aside>
         </div>

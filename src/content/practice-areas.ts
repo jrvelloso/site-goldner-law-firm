@@ -13,13 +13,11 @@ type PracticeAreasContent = {
   sectionTitle: string;
   sectionIntro: string;
   listHint: string;
-  learnMore: string;
-  modalOverviewLabel: string;
-  modalCloseLabel: string;
-  modalInstitutionalLabel: string;
-  modalInstitutionalText: string;
-  modalCtaLabel: string;
-  items: PracticeArea[];
+    learnMore: string;
+    modalOverviewLabel: string;
+    modalCloseLabel: string;
+    modalCtaLabel: string;
+    items: PracticeArea[];
 };
 
 export const practiceAreasByLocale: Record<"pt-BR" | "en", PracticeAreasContent> = {
@@ -32,9 +30,6 @@ export const practiceAreasByLocale: Record<"pt-BR" | "en", PracticeAreasContent>
     learnMore: "Abrir detalhes",
     modalOverviewLabel: "Visão geral",
     modalCloseLabel: "Fechar",
-    modalInstitutionalLabel: "Goldner & Dias Paes Advocacia",
-    modalInstitutionalText:
-      "Conteúdo detalhado desta especialidade pode ser expandido aqui com estrutura própria, benefícios, etapas e contexto jurídico.",
     modalCtaLabel: "Falar sobre esta área",
     items: [
       {
@@ -188,9 +183,6 @@ export const practiceAreasByLocale: Record<"pt-BR" | "en", PracticeAreasContent>
     learnMore: "Open details",
     modalOverviewLabel: "Overview",
     modalCloseLabel: "Close",
-    modalInstitutionalLabel: "Goldner & Dias Paes Advocacia",
-    modalInstitutionalText:
-      "Detailed content for this practice area can be expanded here with its own structure, benefits, stages, and legal context.",
     modalCtaLabel: "Discuss this practice area",
     items: [
       {

@@ -201,16 +201,16 @@ export function SitePage({ locale, copy }: SitePageProps) {
             />
           </Link>
           <div className="hidden items-center gap-9 lg:flex">
-            <Link className="text-[11px] font-bold uppercase tracking-[0.24em] !text-[rgba(244,239,228,0.82)] transition-colors duration-300 hover:!text-[#cfaa76]" href="#sobre">
+            <Link className="text-xs font-bold uppercase tracking-[0.2em] !text-[rgba(244,239,228,0.82)] transition-colors duration-300 hover:!text-[#cfaa76]" href="#sobre">
               {copy.nav.about}
             </Link>
-            <Link className="text-[11px] font-bold uppercase tracking-[0.24em] !text-[rgba(244,239,228,0.82)] transition-colors duration-300 hover:!text-[#cfaa76]" href="#atuacao">
+            <Link className="text-xs font-bold uppercase tracking-[0.2em] !text-[rgba(244,239,228,0.82)] transition-colors duration-300 hover:!text-[#cfaa76]" href="#atuacao">
               {copy.nav.practices}
             </Link>
-            <Link className="text-[11px] font-bold uppercase tracking-[0.24em] !text-[rgba(244,239,228,0.82)] transition-colors duration-300 hover:!text-[#cfaa76]" href="#equipe">
+            <Link className="text-xs font-bold uppercase tracking-[0.2em] !text-[rgba(244,239,228,0.82)] transition-colors duration-300 hover:!text-[#cfaa76]" href="#equipe">
               {copy.nav.team}
             </Link>
-            <Link className="text-[11px] font-bold uppercase tracking-[0.24em] !text-[rgba(244,239,228,0.82)] transition-colors duration-300 hover:!text-[#cfaa76]" href="#contato">
+            <Link className="text-xs font-bold uppercase tracking-[0.2em] !text-[rgba(244,239,228,0.82)] transition-colors duration-300 hover:!text-[#cfaa76]" href="#contato">
               {copy.nav.contact}
             </Link>
           </div>
@@ -224,7 +224,7 @@ export function SitePage({ locale, copy }: SitePageProps) {
               href={whatsappHref}
               target="_blank"
               rel="noreferrer"
-              className="flex items-center gap-2 rounded-full bg-[#cfaa76] px-4 py-2.5 text-[10px] font-bold uppercase tracking-[0.18em] !text-[#292d45] transition-all duration-200 hover:bg-[#d6b486] active:scale-95 sm:px-6 sm:text-xs sm:tracking-widest md:px-8 md:py-3"
+              className="flex items-center gap-2 rounded-full bg-[#cfaa76] px-4 py-2.5 text-[11px] font-bold uppercase tracking-[0.16em] !text-[#292d45] transition-all duration-200 hover:bg-[#d6b486] active:scale-95 sm:px-6 sm:text-xs sm:tracking-[0.2em] md:px-8 md:py-3"
             >
               <span className="hidden sm:inline">{copy.nav.consultation}</span>
               <span className="sm:hidden">Contato</span>
@@ -260,17 +260,17 @@ export function SitePage({ locale, copy }: SitePageProps) {
                   priority
                 />
               </div>
-              <div className="inline-flex max-w-full items-center gap-2.5 border-b border-[rgba(207,170,118,0.28)] pb-3 text-[9px] font-bold uppercase tracking-[0.18em] text-[#cfaa76] sm:text-[10px] sm:tracking-[0.34em] md:text-[11px]">
+              <div className="inline-flex max-w-full items-center gap-2.5 border-b border-[rgba(207,170,118,0.28)] pb-3 text-[11px] font-bold uppercase tracking-[0.18em] text-[#cfaa76] sm:text-xs sm:tracking-[0.24em]">
                 <span className="h-1.5 w-1.5 rounded-full bg-[#cfaa76]"></span>
                 <span className="truncate">{heroText.eyebrow}</span>
               </div>
               <div className="mt-7 max-w-[720px] sm:mt-9">
                 <h1
-                  className="font-headline text-kern-tight text-[2.55rem] leading-[0.96] font-medium tracking-[-0.03em] text-stone-50 sm:text-[3.5rem] md:text-[4.45rem] lg:text-[5.15rem]"
+                  className="font-headline text-kern-tight text-[2.8rem] leading-[0.98] font-medium tracking-[-0.03em] text-stone-50 text-balance sm:text-[3.85rem] md:text-[4.7rem] lg:text-[5.15rem]"
                   dangerouslySetInnerHTML={{ __html: heroText.title }}
                 />
               </div>
-              <p className="mt-6 max-w-[34rem] text-[0.98rem] leading-8 text-stone-200/92 sm:mt-9 sm:text-[1.08rem] md:text-[1.16rem]">
+              <p className="mt-6 max-w-[34rem] text-base leading-8 text-stone-200/92 sm:mt-9 sm:text-[1.08rem] md:text-[1.14rem]">
                 {heroText.body}
               </p>
               <div className="mt-8 flex flex-col gap-3 sm:mt-11 sm:flex-row sm:flex-wrap sm:gap-4">
@@ -278,14 +278,14 @@ export function SitePage({ locale, copy }: SitePageProps) {
                   href={whatsappHref}
                   target="_blank"
                   rel="noreferrer"
-                  className="flex min-h-14 items-center justify-center gap-3 rounded-full bg-[#cfaa76] px-6 py-4 text-center text-[13px] font-bold uppercase tracking-[0.16em] !text-[#292d45] transition-all hover:bg-[#d6b486] sm:min-h-0 sm:justify-start sm:px-9 sm:text-sm"
+                  className="flex min-h-14 items-center justify-center gap-3 rounded-full bg-[#cfaa76] px-6 py-4 text-center text-sm font-bold uppercase tracking-[0.14em] !text-[#292d45] transition-all hover:bg-[#d6b486] sm:min-h-0 sm:justify-start sm:px-9"
                 >
                   <span>{heroText.primaryCta}</span>
                   <span className="h-1.5 w-1.5 rounded-full bg-[#292d45]"></span>
                 </a>
                 <a
                   href="#atuacao"
-                  className="flex min-h-14 items-center justify-center rounded-full !border !border-white/35 !bg-white/8 px-6 py-4 text-center text-[13px] font-bold uppercase tracking-[0.14em] !text-[#f4efe4] shadow-[inset_0_0_0_1px_rgba(255,255,255,0.05)] transition-all hover:!border-white/50 hover:!bg-white/12 sm:min-h-0 sm:px-9 sm:text-sm sm:tracking-[0.16em]"
+                  className="flex min-h-14 items-center justify-center rounded-full !border !border-white/35 !bg-white/8 px-6 py-4 text-center text-sm font-bold uppercase tracking-[0.14em] !text-[#f4efe4] shadow-[inset_0_0_0_1px_rgba(255,255,255,0.05)] transition-all hover:!border-white/50 hover:!bg-white/12 sm:min-h-0 sm:px-9"
                 >
                   {heroText.secondaryCta}
                 </a>
@@ -296,10 +296,10 @@ export function SitePage({ locale, copy }: SitePageProps) {
                     key={item.label}
                     className="rounded-[1.5rem] border border-white/10 bg-black/24 px-5 py-5 shadow-[0_20px_50px_rgba(0,0,0,0.14)] backdrop-blur-md sm:px-6 sm:py-6"
                   >
-                    <div className="text-[10px] font-bold uppercase tracking-[0.34em] text-[#cfaa76]">
+                    <div className="text-[11px] font-bold uppercase tracking-[0.24em] text-[#cfaa76]">
                       {item.label}
                     </div>
-                    <div className="mt-3 text-[0.97rem] leading-7 text-stone-100/92 sm:mt-4">
+                    <div className="mt-3 text-base leading-7 text-stone-100/92 sm:mt-4">
                       {item.body}
                     </div>
                   </div>
@@ -333,7 +333,7 @@ export function SitePage({ locale, copy }: SitePageProps) {
                 {officeSection.paragraphs.map((paragraph) => (
                   <p
                     key={paragraph}
-                    className="text-[1rem] leading-8 text-stone-700 md:text-[1.14rem]"
+                    className="text-[1.02rem] leading-8 text-stone-700 md:text-[1.14rem]"
                   >
                     {paragraph}
                   </p>
@@ -346,10 +346,10 @@ export function SitePage({ locale, copy }: SitePageProps) {
                     key={item.title}
                     className="rounded-[1.6rem] border border-stone-200 bg-white px-6 py-6 shadow-[0_18px_40px_rgba(15,23,42,0.04)]"
                   >
-                    <div className="text-[10px] font-bold uppercase tracking-[0.34em] text-primary">
+                    <div className="text-[11px] font-bold uppercase tracking-[0.24em] text-primary">
                       {item.title}
                     </div>
-                    <p className="mt-4 max-w-[30rem] text-[1rem] leading-7 text-stone-600">
+                    <p className="mt-4 max-w-[30rem] text-[1.02rem] leading-7 text-stone-600">
                       {item.body}
                     </p>
                   </div>
@@ -390,13 +390,13 @@ export function SitePage({ locale, copy }: SitePageProps) {
                       />
                     </div>
                     <div className="px-5 py-6 sm:px-8 md:px-10">
-                      <span className="text-[10px] font-bold uppercase tracking-[0.34em] text-primary">
+                      <span className="text-[11px] font-bold uppercase tracking-[0.24em] text-primary">
                         {member.role}
                       </span>
                       <h3 className="font-headline mt-4 text-[2.35rem] leading-[0.98] text-stone-50 md:text-5xl">
                         {member.name}
                       </h3>
-                      <p className="mt-4 max-w-2xl text-[0.98rem] leading-7 text-stone-300 md:mt-5 md:text-[1.05rem] md:leading-8">
+                      <p className="mt-4 max-w-2xl text-base leading-7 text-stone-300 md:mt-5 md:text-[1.05rem] md:leading-8">
                         {locale === "pt-BR"
                           ? "Atuação orientada por estratégia, rigor técnico e acompanhamento próximo em estruturas empresariais, patrimoniais e sucessórias."
                           : "Practice guided by strategy, technical rigor, and close counsel across corporate, wealth, and succession structures."}
@@ -450,12 +450,12 @@ export function SitePage({ locale, copy }: SitePageProps) {
                 className="h-auto w-[170px] sm:w-[240px]"
               />
             </Link>
-            <p className="max-w-[20rem] text-[0.95rem] leading-7 text-stone-600">
+            <p className="max-w-[20rem] text-base leading-7 text-stone-600">
               {copy.footer.description}
             </p>
           </div>
           <div className="space-y-6">
-            <h4 className="text-[11px] font-bold uppercase tracking-[0.34em] text-stone-500">
+            <h4 className="text-xs font-bold uppercase tracking-[0.22em] text-stone-500">
               {copy.footer.connectLabel}
             </h4>
             <ul className="flex items-center gap-3">
@@ -475,12 +475,12 @@ export function SitePage({ locale, copy }: SitePageProps) {
             </ul>
           </div>
           <div className="space-y-6">
-            <h4 className="text-[11px] font-bold uppercase tracking-[0.34em] text-stone-500">
+            <h4 className="text-xs font-bold uppercase tracking-[0.22em] text-stone-500">
               {copy.footer.locationsLabel}
             </h4>
             <ul className="space-y-6">
               {copy.locations.items.map((location) => (
-                <li key={location.city} className="text-[0.92rem] leading-6 text-stone-500">
+                <li key={location.city} className="text-[0.97rem] leading-7 text-stone-500">
                   <p className="font-headline text-[1.25rem] leading-tight text-stone-900">
                     {location.city}
                   </p>
@@ -493,7 +493,7 @@ export function SitePage({ locale, copy }: SitePageProps) {
                     href={location.mapHref}
                     target="_blank"
                     rel="noreferrer"
-                    className="mt-3 inline-block text-[10px] font-bold uppercase tracking-[0.28em] text-stone-700 transition-colors hover:text-primary"
+                    className="mt-3 inline-block text-[11px] font-bold uppercase tracking-[0.2em] text-stone-700 transition-colors hover:text-primary"
                   >
                     {copy.locations.mapCta}
                   </a>
@@ -502,12 +502,12 @@ export function SitePage({ locale, copy }: SitePageProps) {
             </ul>
           </div>
           <div className="space-y-6">
-            <h4 className="text-[11px] font-bold uppercase tracking-[0.34em] text-stone-500">
+            <h4 className="text-xs font-bold uppercase tracking-[0.22em] text-stone-500">
               {copy.footer.contactLabel}
             </h4>
-            <ul className="space-y-4 text-[0.95rem] leading-7 text-stone-500">
+            <ul className="space-y-4 text-base leading-7 text-stone-500">
               <li>
-                <span className="block text-[10px] font-bold uppercase tracking-[0.28em] text-stone-400">
+                <span className="block text-[11px] font-bold uppercase tracking-[0.2em] text-stone-400">
                   {copy.footer.phoneLabel}
                 </span>
                 <a
@@ -518,7 +518,7 @@ export function SitePage({ locale, copy }: SitePageProps) {
                 </a>
               </li>
               <li>
-                <span className="block text-[10px] font-bold uppercase tracking-[0.28em] text-stone-400">
+                <span className="block text-[11px] font-bold uppercase tracking-[0.2em] text-stone-400">
                   {copy.footer.whatsappLabel}
                 </span>
                 <a
@@ -535,10 +535,10 @@ export function SitePage({ locale, copy }: SitePageProps) {
         </div>
         <div className="mx-auto mt-14 flex max-w-7xl flex-col items-center justify-between gap-6 border-t border-stone-200 px-4 pt-8 text-center sm:px-8 md:mt-20 md:flex-row md:px-20 md:text-left">
           <div className="space-y-2">
-            <p className="text-[10px] font-bold uppercase tracking-[0.26em] text-stone-400">
+            <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-stone-400">
               {copy.footer.copyright}
             </p>
-            <p className="text-[10px] uppercase tracking-[0.22em] text-stone-400">
+            <p className="text-[11px] uppercase tracking-[0.16em] text-stone-400">
               Made by{" "}
               <a
                 href="https://perolamagnetizante.pt"
@@ -552,13 +552,13 @@ export function SitePage({ locale, copy }: SitePageProps) {
           </div>
           <div className="flex flex-wrap justify-center gap-6 md:justify-end md:gap-8">
             <Link
-              className="text-[10px] font-bold uppercase tracking-[0.26em] text-stone-400 hover:text-stone-900"
+              className="text-[11px] font-bold uppercase tracking-[0.18em] text-stone-400 hover:text-stone-900"
               href="#"
             >
               {copy.footer.privacy}
             </Link>
             <Link
-              className="text-[10px] font-bold uppercase tracking-[0.26em] text-stone-400 hover:text-stone-900"
+              className="text-[11px] font-bold uppercase tracking-[0.18em] text-stone-400 hover:text-stone-900"
               href="#"
             >
               {copy.footer.terms}
