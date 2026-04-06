@@ -1,161 +1,116 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
-import type { PracticeItem } from "@/content/site-copy";
+import { PracticeAreaModal } from "@/components/practice-area-modal";
+import { practiceAreasByLocale } from "@/content/practice-areas";
+import type { Locale } from "@/content/site-copy";
+
+const WHATSAPP_NUMBER = "553235127880";
 
 type PracticeAreasSectionProps = {
-  label: string;
-  learnMore: string;
-  items: PracticeItem[];
-  locale: "pt-BR" | "en";
+  locale: Locale;
 };
 
-export function PracticeAreasSection({
-  label,
-  learnMore,
-  items,
-  locale,
-}: PracticeAreasSectionProps) {
-  const [activeIndex, setActiveIndex] = useState<number | null>(null);
+export function PracticeAreasSection({ locale }: PracticeAreasSectionProps) {
+  const [activeAreaId, setActiveAreaId] = useState<string | null>(null);
+  const content = practiceAreasByLocale[locale];
+  const activeArea =
+    activeAreaId === null
+      ? null
+      : content.items.find((item) => item.id === activeAreaId) ?? null;
 
-  useEffect(() => {
-    if (activeIndex === null) {
-      document.body.style.overflow = "";
-      return;
-    }
-
-    document.body.style.overflow = "hidden";
-
-    const handleKeyDown = (event: KeyboardEvent) => {
-      if (event.key === "Escape") {
-        setActiveIndex(null);
-      }
-    };
-
-    window.addEventListener("keydown", handleKeyDown);
-    return () => {
-      document.body.style.overflow = "";
-      window.removeEventListener("keydown", handleKeyDown);
-    };
-  }, [activeIndex]);
-
-  const activeItem = activeIndex !== null ? items[activeIndex] : null;
-  const modalTexts =
-    locale === "pt-BR"
-      ? {
-          subtitle: "Especialidade",
-          overview: "Visão geral",
-          close: "Fechar",
-          contact: "Agendar consultoria",
-        }
-      : {
-          subtitle: "Practice area",
-          overview: "Overview",
-          close: "Close",
-          contact: "Schedule consultation",
-        };
+  const whatsappHref = activeArea
+    ? `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
+        locale === "pt-BR"
+          ? `Olá, gostaria de falar sobre a área de ${activeArea.whatsappTopic}.`
+          : `Hello, I would like to discuss the practice area of ${activeArea.whatsappTopic}.`,
+      )}`
+    : `https://wa.me/${WHATSAPP_NUMBER}`;
 
   return (
     <>
-      <section id="atuacao" className="bg-stone-100 px-4 py-18 sm:px-8 sm:py-24 md:py-28">
-        <div className="mx-auto grid max-w-7xl gap-14 md:px-12 lg:grid-cols-[240px_minmax(0,1fr)] lg:gap-20 lg:px-20">
-          <div className="lg:pt-2">
-            <span className="text-xs font-bold uppercase tracking-[0.4em] text-primary">
-              {label}
-            </span>
-            <div className="mt-4 h-px w-20 bg-primary opacity-30"></div>
-          </div>
-          <div className="-mx-4 flex snap-x snap-mandatory gap-4 overflow-x-auto px-4 pb-2 md:mx-0 md:grid md:grid-cols-2 md:gap-x-12 md:overflow-visible md:px-0 md:pb-0">
-            {items.map((item, index) => (
-              <button
-                key={item.title}
-                className="group min-w-[82%] snap-start rounded-[1.4rem] border border-stone-200 bg-stone-50 p-5 text-left shadow-[0_18px_40px_rgba(15,23,42,0.04)] md:min-w-0 md:rounded-none md:border-0 md:border-t md:bg-transparent md:px-0 md:py-9 md:shadow-none md:first:pt-0 md:[&:nth-child(-n+2)]:pt-0"
-                type="button"
-                onClick={() => setActiveIndex(index)}
-              >
-                <div className="mb-4 flex items-start gap-3 sm:items-baseline sm:gap-4">
-                  <span className="min-w-8 pt-1 text-[10px] font-bold uppercase tracking-[0.28em] text-stone-300 sm:text-[11px] sm:tracking-[0.32em]">
-                    {String(index + 1).padStart(2, "0")}
-                  </span>
-                  <h3 className="font-headline text-[1.4rem] leading-tight text-stone-950 transition-colors duration-300 group-hover:text-primary sm:text-[1.55rem] md:text-[2rem]">
-                    {item.title}
-                  </h3>
+      <section
+        id="atuacao"
+        className="bg-[linear-gradient(180deg,#f6f3ed_0%,#fbf8f3_45%,#f3eee6_100%)] px-4 py-18 sm:px-8 sm:py-24 md:py-28"
+      >
+        <div className="mx-auto max-w-7xl md:px-12 lg:px-20">
+          <div className="grid gap-12 lg:grid-cols-[280px_minmax(0,1fr)] lg:gap-20">
+            <div className="lg:pt-2">
+              <span className="text-xs font-bold uppercase tracking-[0.4em] text-primary">
+                {content.sectionLabel}
+              </span>
+              <div className="mt-4 h-px w-20 bg-primary opacity-30"></div>
+              <p className="mt-8 max-w-[15rem] text-sm leading-7 text-[rgba(41,45,69,0.58)]">
+                {content.listHint}
+              </p>
+            </div>
+
+            <div>
+              <div className="max-w-4xl">
+                <h2 className="font-headline max-w-3xl text-4xl leading-[1.02] text-[#292d45] md:text-5xl">
+                  {content.sectionTitle}
+                </h2>
+                <p className="mt-6 max-w-3xl text-[1rem] leading-8 text-[rgba(41,45,69,0.72)] md:text-[1.08rem]">
+                  {content.sectionIntro}
+                </p>
+              </div>
+
+              <div className="mt-12 rounded-[2rem] border border-[rgba(122,119,109,0.14)] bg-[rgba(255,255,255,0.62)] p-3 shadow-[0_24px_70px_rgba(41,45,69,0.06)] backdrop-blur-sm sm:p-4 md:p-5">
+                <div className="grid gap-3 md:grid-cols-2">
+                  {content.items.map((item, index) => (
+                    <button
+                      key={item.id}
+                      type="button"
+                      onClick={() => setActiveAreaId(item.id)}
+                      className="group rounded-[1.6rem] border border-transparent bg-[rgba(252,250,247,0.92)] px-5 py-5 text-left transition-all duration-300 hover:-translate-y-0.5 hover:border-[rgba(207,170,118,0.32)] hover:shadow-[0_18px_36px_rgba(41,45,69,0.08)] focus-visible:border-[rgba(207,170,118,0.4)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[rgba(207,170,118,0.28)] sm:px-6 sm:py-6"
+                    >
+                      <div className="flex items-start justify-between gap-4">
+                        <div>
+                          <div className="text-[10px] font-bold uppercase tracking-[0.34em] text-[#7a776d]">
+                            {item.eyebrow}
+                          </div>
+                          <h3 className="font-headline mt-4 max-w-[18rem] text-[1.5rem] leading-[1.05] text-[#292d45] transition-colors duration-300 group-hover:text-primary sm:text-[1.75rem]">
+                            {item.title}
+                          </h3>
+                        </div>
+                        <span className="pt-1 text-[10px] font-bold uppercase tracking-[0.32em] text-[rgba(122,119,109,0.5)]">
+                          {String(index + 1).padStart(2, "0")}
+                        </span>
+                      </div>
+
+                      <p className="mt-5 max-w-[31rem] text-[0.98rem] leading-7 text-[rgba(41,45,69,0.66)]">
+                        {item.overview}
+                      </p>
+                      <div className="mt-7 inline-flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.28em] text-[#292d45] transition-colors duration-300 group-hover:text-primary">
+                        <span>{content.learnMore}</span>
+                        <span
+                          aria-hidden="true"
+                          className="flex h-7 w-7 items-center justify-center rounded-full border border-[rgba(122,119,109,0.16)] text-sm transition-colors duration-300 group-hover:border-[rgba(207,170,118,0.28)]"
+                        >
+                          +
+                        </span>
+                      </div>
+                    </button>
+                  ))}
                 </div>
-                <div className="pl-0 sm:pl-12 md:pl-0 lg:pl-12">
-                  <p className="max-w-[28rem] text-[0.98rem] leading-7 text-stone-600 sm:text-[1.02rem] sm:leading-8">
-                    {item.body}
-                  </p>
-                  <div className="mt-6 inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.28em] text-stone-900 transition-colors duration-300 group-hover:text-primary">
-                    <span>{learnMore}</span>
-                    <span aria-hidden="true">+</span>
-                  </div>
-                </div>
-              </button>
-            ))}
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      {activeItem ? (
-        <div
-          className="fixed inset-0 z-[100] flex items-center justify-center bg-black/60 px-3 py-4 backdrop-blur-sm sm:px-4 sm:py-8"
-          onClick={() => setActiveIndex(null)}
-        >
-          <div
-            className="relative max-h-[92vh] w-full max-w-4xl overflow-y-auto rounded-[1.5rem] bg-stone-50 shadow-2xl sm:rounded-[2rem]"
-            onClick={(event) => event.stopPropagation()}
-          >
-            <div className="border-b border-stone-200 px-4 py-4 sm:px-6 sm:py-5 md:px-10">
-              <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between sm:gap-6">
-                <div>
-                  <div className="text-[10px] font-bold uppercase tracking-[0.34em] text-primary">
-                    {modalTexts.subtitle}
-                  </div>
-                  <h3 className="font-headline mt-3 max-w-2xl text-2xl leading-tight text-stone-950 sm:text-3xl md:text-5xl">
-                    {activeItem.title}
-                  </h3>
-                </div>
-                <button
-                  className="self-start rounded-full border border-stone-300 px-4 py-2 text-[11px] font-bold uppercase tracking-[0.26em] text-stone-700 transition-colors hover:border-stone-900 hover:text-stone-950"
-                  type="button"
-                  onClick={() => setActiveIndex(null)}
-                >
-                  {modalTexts.close}
-                </button>
-              </div>
-            </div>
-
-            <div className="grid gap-6 px-4 py-6 sm:gap-8 sm:px-6 sm:py-8 md:grid-cols-[1.2fr_0.8fr] md:px-10 md:py-10">
-              <div>
-                <div className="text-[10px] font-bold uppercase tracking-[0.34em] text-stone-400">
-                  {modalTexts.overview}
-                </div>
-                <p className="mt-5 max-w-2xl text-base leading-7 text-stone-700 sm:text-lg sm:leading-8">
-                  {activeItem.body}
-                </p>
-              </div>
-
-              <div className="rounded-[1.5rem] bg-stone-900 p-6 text-stone-50">
-                <div className="text-[10px] font-bold uppercase tracking-[0.34em] text-stone-400">
-                  Goldner & Dias Paes Advocacia
-                </div>
-                <p className="mt-5 text-base leading-7 text-stone-300">
-                  {locale === "pt-BR"
-                    ? "Conteúdo detalhado desta especialidade pode ser expandido aqui com estrutura própria, benefícios, etapas e contexto jurídico."
-                    : "Detailed content for this practice area can be expanded here with its own structure, benefits, stages, and legal context."}
-                </p>
-                <button
-                  className="mt-8 rounded-full bg-primary px-6 py-3 text-[11px] font-bold uppercase tracking-[0.26em] !text-white transition-opacity hover:opacity-90"
-                  type="button"
-                >
-                  {modalTexts.contact}
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      ) : null}
+      <PracticeAreaModal
+        area={activeArea}
+        locale={locale}
+        institutionalLabel={content.modalInstitutionalLabel}
+        institutionalText={content.modalInstitutionalText}
+        overviewLabel={content.modalOverviewLabel}
+        closeLabel={content.modalCloseLabel}
+        ctaLabel={content.modalCtaLabel}
+        whatsappHref={whatsappHref}
+        onClose={() => setActiveAreaId(null)}
+      />
     </>
   );
 }

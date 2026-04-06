@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Script from "next/script";
 
 import { SitePage } from "@/components/site-page";
+import { practiceAreasByLocale } from "@/content/practice-areas";
 import { locales } from "@/content/site-copy";
 
 export const metadata: Metadata = {
@@ -38,7 +39,7 @@ export default function EnglishPage() {
       "https://br.linkedin.com/company/goldnerdiaspaeschamarelli",
     ],
     areaServed: ["Brazil", "São Paulo", "Minas Gerais"],
-    serviceType: locales.en.practiceAreas.items.map((item) => item.title),
+    serviceType: practiceAreasByLocale.en.items.map((item) => item.title),
     address: locales.en.locations.items.map((location) => ({
       "@type": "PostalAddress",
       addressLocality: location.city,

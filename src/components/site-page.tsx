@@ -3,6 +3,7 @@ import Link from "next/link";
 
 import headerLogo from "@/app/assets/header_logo.svg";
 import logo from "@/app/assets/logo.png";
+import footerLogo from "@/app/assets/logo2.png";
 import whatsappIcon from "@/app/assets/whatsapp.png";
 import { LanguageSwitcher } from "@/components/language-switcher";
 import { PartnersSection } from "@/components/partners-section";
@@ -185,7 +186,7 @@ export function SitePage({ locale, copy }: SitePageProps) {
 
   return (
     <>
-      <nav className="fixed top-0 z-50 w-full border-b border-white/7 bg-stone-950/88 transition-opacity duration-300 backdrop-blur-xl">
+      <nav className="fixed top-0 z-50 w-full border-b border-[rgba(207,170,118,0.12)] bg-[rgba(41,45,69,0.92)] transition-opacity duration-300 backdrop-blur-xl">
         <div className="mx-auto flex w-full max-w-[1920px] items-center justify-between gap-3 px-4 py-3 sm:px-6 md:px-10 md:py-5">
           <Link
             href="/"
@@ -200,16 +201,16 @@ export function SitePage({ locale, copy }: SitePageProps) {
             />
           </Link>
           <div className="hidden items-center gap-9 lg:flex">
-            <Link className="text-[11px] font-bold uppercase tracking-[0.24em] !text-[#d7d0c3] transition-colors duration-300 hover:!text-[#f0cb7d]" href="#sobre">
+            <Link className="text-[11px] font-bold uppercase tracking-[0.24em] !text-[rgba(244,239,228,0.82)] transition-colors duration-300 hover:!text-[#cfaa76]" href="#sobre">
               {copy.nav.about}
             </Link>
-            <Link className="text-[11px] font-bold uppercase tracking-[0.24em] !text-[#d7d0c3] transition-colors duration-300 hover:!text-[#f0cb7d]" href="#atuacao">
+            <Link className="text-[11px] font-bold uppercase tracking-[0.24em] !text-[rgba(244,239,228,0.82)] transition-colors duration-300 hover:!text-[#cfaa76]" href="#atuacao">
               {copy.nav.practices}
             </Link>
-            <Link className="text-[11px] font-bold uppercase tracking-[0.24em] !text-[#d7d0c3] transition-colors duration-300 hover:!text-[#f0cb7d]" href="#equipe">
+            <Link className="text-[11px] font-bold uppercase tracking-[0.24em] !text-[rgba(244,239,228,0.82)] transition-colors duration-300 hover:!text-[#cfaa76]" href="#equipe">
               {copy.nav.team}
             </Link>
-            <Link className="text-[11px] font-bold uppercase tracking-[0.24em] !text-[#d7d0c3] transition-colors duration-300 hover:!text-[#f0cb7d]" href="#contato">
+            <Link className="text-[11px] font-bold uppercase tracking-[0.24em] !text-[rgba(244,239,228,0.82)] transition-colors duration-300 hover:!text-[#cfaa76]" href="#contato">
               {copy.nav.contact}
             </Link>
           </div>
@@ -223,11 +224,11 @@ export function SitePage({ locale, copy }: SitePageProps) {
               href={whatsappHref}
               target="_blank"
               rel="noreferrer"
-              className="flex items-center gap-2 rounded-full bg-primary px-4 py-2.5 text-[10px] font-bold uppercase tracking-[0.18em] !text-white transition-all duration-200 hover:opacity-80 active:scale-95 sm:px-6 sm:text-xs sm:tracking-widest md:px-8 md:py-3"
+              className="flex items-center gap-2 rounded-full bg-[#cfaa76] px-4 py-2.5 text-[10px] font-bold uppercase tracking-[0.18em] !text-[#292d45] transition-all duration-200 hover:bg-[#d6b486] active:scale-95 sm:px-6 sm:text-xs sm:tracking-widest md:px-8 md:py-3"
             >
               <span className="hidden sm:inline">{copy.nav.consultation}</span>
               <span className="sm:hidden">Contato</span>
-              <span className="h-1.5 w-1.5 rounded-full bg-white"></span>
+              <span className="h-1.5 w-1.5 rounded-full bg-[#292d45]"></span>
             </a>
           </div>
         </div>
@@ -245,19 +246,12 @@ export function SitePage({ locale, copy }: SitePageProps) {
               sizes="100vw"
             />
             <div className="hero-gradient absolute inset-0"></div>
-            <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(8,8,8,0.94)_0%,rgba(10,10,10,0.82)_46%,rgba(10,10,10,0.58)_100%)]"></div>
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_72%_44%,rgba(201,168,92,0.06),transparent_24%)]"></div>
-          </div>
-          <div className="pointer-events-none absolute right-[5%] top-1/2 hidden -translate-y-1/2 lg:block">
-            <Image
-              src={logo}
-              alt=""
-              className="h-auto w-[400px] object-contain"
-              priority
-            />
+            <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(24,26,40,0.97)_0%,rgba(34,38,59,0.88)_46%,rgba(41,45,69,0.7)_100%)]"></div>
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_72%_44%,rgba(207,170,118,0.14),transparent_24%)]"></div>
           </div>
           <div className="relative z-10 mx-auto w-full max-w-[1440px] px-4 pb-10 pt-20 sm:px-6 sm:pb-0 sm:pt-28 md:px-12 md:pt-36 lg:px-20">
-            <div className="max-w-[760px]">
+            <div className="grid items-center gap-12 lg:grid-cols-[minmax(0,760px)_minmax(280px,1fr)] lg:gap-10 xl:gap-16">
+              <div className="max-w-[760px]">
               <div className="mb-5 inline-flex rounded-[1.15rem] border border-white/8 bg-black/18 p-2.5 backdrop-blur-sm sm:mb-8 sm:p-4 lg:hidden">
                 <Image
                   src={logo}
@@ -266,8 +260,8 @@ export function SitePage({ locale, copy }: SitePageProps) {
                   priority
                 />
               </div>
-              <div className="inline-flex max-w-full items-center gap-2.5 border-b border-[#c7a35a]/28 pb-3 text-[9px] font-bold uppercase tracking-[0.18em] text-[#dcc28a] sm:text-[10px] sm:tracking-[0.34em] md:text-[11px]">
-                <span className="h-1.5 w-1.5 rounded-full bg-[#c9a85c]"></span>
+              <div className="inline-flex max-w-full items-center gap-2.5 border-b border-[rgba(207,170,118,0.28)] pb-3 text-[9px] font-bold uppercase tracking-[0.18em] text-[#cfaa76] sm:text-[10px] sm:tracking-[0.34em] md:text-[11px]">
+                <span className="h-1.5 w-1.5 rounded-full bg-[#cfaa76]"></span>
                 <span className="truncate">{heroText.eyebrow}</span>
               </div>
               <div className="mt-7 max-w-[720px] sm:mt-9">
@@ -284,10 +278,10 @@ export function SitePage({ locale, copy }: SitePageProps) {
                   href={whatsappHref}
                   target="_blank"
                   rel="noreferrer"
-                  className="flex min-h-14 items-center justify-center gap-3 rounded-full bg-primary px-6 py-4 text-center text-[13px] font-bold uppercase tracking-[0.16em] !text-white transition-all hover:opacity-90 sm:min-h-0 sm:justify-start sm:px-9 sm:text-sm"
+                  className="flex min-h-14 items-center justify-center gap-3 rounded-full bg-[#cfaa76] px-6 py-4 text-center text-[13px] font-bold uppercase tracking-[0.16em] !text-[#292d45] transition-all hover:bg-[#d6b486] sm:min-h-0 sm:justify-start sm:px-9 sm:text-sm"
                 >
                   <span>{heroText.primaryCta}</span>
-                  <span className="h-1.5 w-1.5 rounded-full bg-white"></span>
+                  <span className="h-1.5 w-1.5 rounded-full bg-[#292d45]"></span>
                 </a>
                 <a
                   href="#atuacao"
@@ -302,7 +296,7 @@ export function SitePage({ locale, copy }: SitePageProps) {
                     key={item.label}
                     className="rounded-[1.5rem] border border-white/10 bg-black/24 px-5 py-5 shadow-[0_20px_50px_rgba(0,0,0,0.14)] backdrop-blur-md sm:px-6 sm:py-6"
                   >
-                    <div className="text-[10px] font-bold uppercase tracking-[0.34em] text-[#d1ae67]">
+                    <div className="text-[10px] font-bold uppercase tracking-[0.34em] text-[#cfaa76]">
                       {item.label}
                     </div>
                     <div className="mt-3 text-[0.97rem] leading-7 text-stone-100/92 sm:mt-4">
@@ -310,6 +304,17 @@ export function SitePage({ locale, copy }: SitePageProps) {
                     </div>
                   </div>
                 ))}
+              </div>
+              </div>
+              <div className="pointer-events-none hidden justify-center lg:flex lg:justify-end">
+                <div className="flex w-full max-w-[440px] justify-center xl:justify-end">
+                  <Image
+                    src={logo}
+                    alt=""
+                    className="h-auto w-[300px] object-contain opacity-[0.96] xl:w-[360px]"
+                    priority
+                  />
+                </div>
               </div>
             </div>
           </div>
@@ -355,9 +360,6 @@ export function SitePage({ locale, copy }: SitePageProps) {
         </section>
 
         <PracticeAreasSection
-          label={copy.practiceAreas.label}
-          learnMore={copy.practiceAreas.learnMore}
-          items={copy.practiceAreas.items}
           locale={locale}
         />
 
@@ -388,7 +390,7 @@ export function SitePage({ locale, copy }: SitePageProps) {
                       />
                     </div>
                     <div className="px-5 py-6 sm:px-8 md:px-10">
-                      <span className="text-[10px] font-bold uppercase tracking-[0.34em] text-[#d1ae67]">
+                      <span className="text-[10px] font-bold uppercase tracking-[0.34em] text-primary">
                         {member.role}
                       </span>
                       <h3 className="font-headline mt-4 text-[2.35rem] leading-[0.98] text-stone-50 md:text-5xl">
@@ -443,7 +445,7 @@ export function SitePage({ locale, copy }: SitePageProps) {
           <div className="space-y-6">
             <Link href="/" aria-label="Goldner & Dias Paes home" className="inline-block">
               <Image
-                src={logo}
+                src={footerLogo}
                 alt="Goldner & Dias Paes Advocacia"
                 className="h-auto w-[170px] sm:w-[240px]"
               />
@@ -460,7 +462,7 @@ export function SitePage({ locale, copy }: SitePageProps) {
               {copy.footer.socialLinks.map((item) => (
                 <li key={item.label}>
                   <a
-                    className="flex h-10 w-10 items-center justify-center rounded-full border border-stone-200 text-stone-500 transition-colors hover:border-red-200 hover:text-red-700"
+                    className="flex h-10 w-10 items-center justify-center rounded-full border border-stone-200 text-stone-500 transition-colors hover:border-primary/40 hover:text-[#292d45]"
                     href={item.href}
                     target="_blank"
                     rel="noreferrer"
@@ -510,7 +512,7 @@ export function SitePage({ locale, copy }: SitePageProps) {
                 </span>
                 <a
                   href={phoneHref}
-                  className="mt-1 inline-block text-stone-800 transition-colors hover:text-red-700"
+                  className="mt-1 inline-block text-stone-800 transition-colors hover:text-primary"
                 >
                   {copy.footer.phoneDisplay}
                 </a>
@@ -523,7 +525,7 @@ export function SitePage({ locale, copy }: SitePageProps) {
                   href={whatsappHref}
                   target="_blank"
                   rel="noreferrer"
-                  className="mt-1 inline-block text-stone-800 transition-colors hover:text-red-700"
+                  className="mt-1 inline-block text-stone-800 transition-colors hover:text-primary"
                 >
                   {copy.footer.whatsappDisplay}
                 </a>

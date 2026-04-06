@@ -18,11 +18,13 @@ export function LanguageSwitcher({
   const isEnglishPath = pathname.startsWith("/en");
 
   return (
-    <div className="lang-pill flex items-center rounded-full bg-stone-200/70 p-1 text-xs font-bold uppercase tracking-widest">
+    <div className="lang-pill flex items-center rounded-full border border-white/10 bg-[rgba(122,119,109,0.26)] p-1 text-xs font-bold uppercase tracking-widest">
       <Link
         href="/"
         className={`rounded-full px-3 py-2 transition-colors ${
-          locale === "pt-BR" ? "bg-primary !text-white" : "text-stone-400"
+          locale === "pt-BR"
+            ? "bg-[#cfaa76] !text-[#292d45]"
+            : "text-[rgba(244,239,228,0.7)] hover:text-[#cfaa76]"
         }`}
         aria-current={!isEnglishPath ? "page" : undefined}
       >
@@ -31,7 +33,9 @@ export function LanguageSwitcher({
       <Link
         href="/en"
         className={`rounded-full px-3 py-2 transition-colors ${
-          locale === "en" ? "bg-primary !text-white" : "text-stone-400"
+          locale === "en"
+            ? "bg-[#cfaa76] !text-[#292d45]"
+            : "text-[rgba(244,239,228,0.7)] hover:text-[#cfaa76]"
         }`}
         aria-current={isEnglishPath ? "page" : undefined}
       >

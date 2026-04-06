@@ -41,17 +41,17 @@ export function PartnersSection({ locale }: PartnersSectionProps) {
               {copy.intro}
             </p>
 
-            <div className="mt-10 rounded-[2rem] border border-stone-200 bg-[linear-gradient(180deg,#fff_0%,#f7f4ee_100%)] p-4 shadow-[0_24px_70px_rgba(15,23,42,0.05)] sm:p-5 md:p-6">
+            <div className="mt-10 rounded-[2rem] border border-stone-200 bg-[linear-gradient(180deg,#fff_0%,#f2ede4_100%)] p-4 shadow-[0_24px_70px_rgba(41,45,69,0.08)] sm:p-5 md:p-6">
               <div className="-mx-4 flex snap-x snap-mandatory gap-3 overflow-x-auto px-4 pb-2 sm:mx-0 sm:flex-wrap sm:justify-center sm:overflow-visible sm:px-0 sm:pb-0">
                 {partnerLogos.map((logo, index) => (
                   <div
                     key={`${logo.alt}-${index}`}
-                    className="group flex min-h-24 min-w-[70%] snap-start items-center justify-center rounded-[1.35rem] border border-stone-200/80 bg-white px-4 py-4 transition-all duration-300 hover:-translate-y-0.5 hover:border-[#d6b46a]/40 hover:shadow-[0_16px_34px_rgba(15,23,42,0.07)] sm:min-w-0 sm:w-[calc(33.333%-0.5rem)] lg:w-[calc(20%-0.6rem)] xl:w-[calc(16.666%-0.65rem)]"
+                    className="group flex min-h-24 min-w-[70%] snap-start items-center justify-center rounded-[1.35rem] border border-stone-200/80 bg-white px-3 py-3 transition-all duration-300 hover:-translate-y-0.5 hover:border-primary/40 hover:shadow-[0_16px_34px_rgba(41,45,69,0.10)] sm:min-w-0 sm:w-[calc(33.333%-0.5rem)] lg:w-[calc(20%-0.6rem)] xl:w-[calc(16.666%-0.65rem)]"
                   >
                     <Image
                       src={logo.src}
                       alt={logo.alt}
-                      className="h-14 w-auto max-w-full object-contain opacity-80 grayscale transition-all duration-300 group-hover:opacity-100 group-hover:grayscale-0 sm:h-16"
+                      className="h-16 w-auto max-w-full object-contain opacity-80 grayscale transition-all duration-300 group-hover:opacity-100 group-hover:grayscale-0 sm:h-20"
                     />
                   </div>
                 ))}

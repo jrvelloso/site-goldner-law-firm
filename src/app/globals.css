@@ -1,27 +1,27 @@
 @import "tailwindcss";
 
 :root {
-  --background: #faf9f5;
-  --foreground: #1b1c1a;
-  --surface: #faf9f5;
-  --surface-container-high: #e9e8e4;
-  --primary: #b7102a;
-  --primary-container: #db313f;
-  --secondary: #5f5e5e;
-  --outline-variant: #e4bebc;
+  --background: #f6f3ed;
+  --foreground: #292d45;
+  --surface: #fcfaf7;
+  --surface-container-high: #e8e1d8;
+  --primary: #cfaa76;
+  --primary-container: #7a776d;
+  --secondary: #7a776d;
+  --outline-variant: #d8c4a5;
 }
 
 @theme inline {
-  --color-background: #faf9f5;
-  --color-foreground: #1b1c1a;
-  --color-surface: #faf9f5;
-  --color-on-surface: #1b1c1a;
-  --color-primary: #b7102a;
-  --color-primary-container: #db313f;
-  --color-secondary: #5f5e5e;
-  --color-surface-container-low: #f4f4f0;
-  --color-surface-container-high: #e9e8e4;
-  --color-outline-variant: #e4bebc;
+  --color-background: #f6f3ed;
+  --color-foreground: #292d45;
+  --color-surface: #fcfaf7;
+  --color-on-surface: #292d45;
+  --color-primary: #cfaa76;
+  --color-primary-container: #7a776d;
+  --color-secondary: #7a776d;
+  --color-surface-container-low: #f1ece4;
+  --color-surface-container-high: #e8e1d8;
+  --color-outline-variant: #d8c4a5;
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
   --font-serif: var(--font-newsreader), Georgia, serif;
 }
@@ -63,7 +63,7 @@ button {
 }
 
 .hero-gradient {
-  background: radial-gradient(circle at center, rgba(27, 28, 26, 0.4) 0%, rgba(27, 28, 26, 0.8) 100%);
+  background: radial-gradient(circle at center, rgba(41, 45, 69, 0.34) 0%, rgba(41, 45, 69, 0.82) 100%);
 }
 
 .text-kern-tight {

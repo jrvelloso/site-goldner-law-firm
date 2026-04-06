@@ -57,7 +57,7 @@ export function TestimonialsSection({
   return (
     <>
       <section className="bg-stone-50 px-4 py-18 sm:px-8 sm:py-24 md:py-28">
-        <div className="mx-auto max-w-[1920px] rounded-[1.5rem] bg-[linear-gradient(180deg,#171412_0%,#211b18_100%)] px-5 py-12 sm:px-8 sm:py-16 md:rounded-[2rem] md:px-14 md:py-20">
+        <div className="mx-auto max-w-[1920px] rounded-[1.5rem] bg-[linear-gradient(180deg,#23273c_0%,#292d45_100%)] px-5 py-12 sm:px-8 sm:py-16 md:rounded-[2rem] md:px-14 md:py-20">
           <div className="grid gap-12 lg:grid-cols-[260px_minmax(0,1fr)] lg:gap-20">
             <div className="lg:pt-2">
               <span className="text-xs font-bold uppercase tracking-[0.4em] text-primary">
@@ -85,7 +85,7 @@ export function TestimonialsSection({
                   key={`${item.name}-${item.quote}`}
                   className="min-w-[85%] snap-start rounded-[1.4rem] border border-white/8 bg-white/[0.04] p-5 sm:min-w-[70%] sm:p-6 md:min-w-0"
                 >
-                  <div className="text-3xl leading-none text-[#c9a85c]">"</div>
+                  <div className="text-3xl leading-none text-primary">"</div>
                   <p className="mt-4 line-clamp-6 text-[0.98rem] leading-7 text-stone-200">
                     {item.quote}
                   </p>
@@ -112,7 +112,7 @@ export function TestimonialsSection({
           >
             <div className="mb-8 flex flex-col gap-4 border-b border-white/8 pb-6 sm:flex-row sm:items-end sm:justify-between">
               <div>
-                <div className="text-[10px] font-bold uppercase tracking-[0.34em] text-[#c9a85c]">
+                <div className="text-[10px] font-bold uppercase tracking-[0.34em] text-primary">
                   {label}
                 </div>
                 <h3 className="font-headline mt-3 text-3xl text-stone-50 md:text-5xl">
@@ -120,7 +120,7 @@ export function TestimonialsSection({
                 </h3>
               </div>
               <button
-                className="self-start rounded-full border border-white/12 px-4 py-2 text-[11px] font-bold uppercase tracking-[0.26em] text-stone-100 transition-colors hover:border-[#c9a85c]/40"
+                className="self-start rounded-full border border-white/12 px-4 py-2 text-[11px] font-bold uppercase tracking-[0.26em] text-stone-100 transition-colors hover:border-primary/40 hover:text-primary"
                 type="button"
                 onClick={() => setIsOpen(false)}
               >
@@ -134,7 +134,7 @@ export function TestimonialsSection({
                   key={`${item.name}-${item.quote}-modal`}
                   className="mb-5 break-inside-avoid rounded-[1.6rem] border border-white/8 bg-white/[0.04] p-6"
                 >
-                  <div className="text-3xl leading-none text-[#c9a85c]">"</div>
+                  <div className="text-3xl leading-none text-primary">"</div>
                   <p className="mt-4 text-[1rem] leading-8 text-stone-200">
                     {item.quote}
                   </p>
