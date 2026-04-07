@@ -252,13 +252,15 @@ export function SitePage({ locale, copy }: SitePageProps) {
           <div className="relative z-10 mx-auto w-full max-w-[1440px] px-4 pb-10 pt-20 sm:px-6 sm:pb-0 sm:pt-28 md:px-12 md:pt-36 lg:px-20">
             <div className="grid items-center gap-12 lg:grid-cols-[minmax(0,760px)_minmax(280px,1fr)] lg:gap-10 xl:gap-16">
               <div className="max-w-[760px]">
-              <div className="mb-5 inline-flex rounded-[1.15rem] border border-white/8 bg-black/18 p-2.5 backdrop-blur-sm sm:mb-8 sm:p-4 lg:hidden">
+              <div className="mb-6 flex justify-center lg:hidden">
+                <div className="inline-flex rounded-[1.35rem] border border-white/10 bg-[rgba(14,16,24,0.3)] px-5 py-4 shadow-[0_16px_34px_rgba(0,0,0,0.16)] backdrop-blur-sm sm:mb-8 sm:px-6 sm:py-5">
                 <Image
                   src={logo}
                   alt="Goldner & Dias Paes Advocacia"
-                  className="h-auto w-32 object-contain opacity-[0.94] sm:w-44"
+                  className="h-auto w-[172px] object-contain opacity-[0.96] sm:w-[212px]"
                   priority
                 />
+                </div>
               </div>
               <div className="inline-flex max-w-full items-center gap-2.5 border-b border-[rgba(207,170,118,0.28)] pb-3 text-[11px] font-bold uppercase tracking-[0.18em] text-[#cfaa76] sm:text-xs sm:tracking-[0.24em]">
                 <span className="h-1.5 w-1.5 rounded-full bg-[#cfaa76]"></span>
@@ -441,8 +443,8 @@ export function SitePage({ locale, copy }: SitePageProps) {
       </main>
 
       <footer className="w-full bg-stone-100 pb-10 pt-14 sm:pt-20">
-        <div className="mx-auto grid max-w-7xl grid-cols-1 gap-10 px-4 sm:px-8 md:grid-cols-4 md:gap-10 md:px-20">
-          <div className="space-y-6">
+        <div className="mx-auto grid max-w-7xl grid-cols-1 gap-10 px-4 text-center sm:px-8 md:grid-cols-4 md:gap-10 md:px-20 md:text-left">
+          <div className="space-y-6 md:text-left">
             <Link href="/" aria-label="Goldner & Dias Paes home" className="inline-block">
               <Image
                 src={footerLogo}
@@ -450,15 +452,15 @@ export function SitePage({ locale, copy }: SitePageProps) {
                 className="h-auto w-[170px] sm:w-[240px]"
               />
             </Link>
-            <p className="max-w-[20rem] text-base leading-7 text-stone-600">
+            <p className="mx-auto max-w-[20rem] text-base leading-7 text-stone-600 md:mx-0">
               {copy.footer.description}
             </p>
           </div>
-          <div className="space-y-6">
+          <div className="space-y-6 md:text-left">
             <h4 className="text-xs font-bold uppercase tracking-[0.22em] text-stone-500">
               {copy.footer.connectLabel}
             </h4>
-            <ul className="flex items-center gap-3">
+            <ul className="flex items-center justify-center gap-3 md:justify-start">
               {copy.footer.socialLinks.map((item) => (
                 <li key={item.label}>
                   <a
@@ -474,7 +476,7 @@ export function SitePage({ locale, copy }: SitePageProps) {
               ))}
             </ul>
           </div>
-          <div className="space-y-6">
+          <div className="space-y-6 md:text-left">
             <h4 className="text-xs font-bold uppercase tracking-[0.22em] text-stone-500">
               {copy.footer.locationsLabel}
             </h4>
@@ -501,7 +503,7 @@ export function SitePage({ locale, copy }: SitePageProps) {
               ))}
             </ul>
           </div>
-          <div className="space-y-6">
+          <div className="space-y-6 md:text-left">
             <h4 className="text-xs font-bold uppercase tracking-[0.22em] text-stone-500">
               {copy.footer.contactLabel}
             </h4>
@@ -534,6 +536,20 @@ export function SitePage({ locale, copy }: SitePageProps) {
           </div>
         </div>
         <div className="mx-auto mt-14 flex max-w-7xl flex-col items-center justify-between gap-6 border-t border-stone-200 px-4 pt-8 text-center sm:px-8 md:mt-20 md:flex-row md:px-20 md:text-left">
+          <div className="flex flex-wrap justify-center gap-6 md:order-1 md:justify-start md:gap-8">
+            <Link
+              className="text-[11px] font-bold uppercase tracking-[0.18em] text-stone-400 hover:text-stone-900"
+              href="#"
+            >
+              {copy.footer.privacy}
+            </Link>
+            <Link
+              className="text-[11px] font-bold uppercase tracking-[0.18em] text-stone-400 hover:text-stone-900"
+              href="#"
+            >
+              {copy.footer.terms}
+            </Link>
+          </div>
           <div className="space-y-2">
             <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-stone-400">
               {copy.footer.copyright}
@@ -549,20 +565,6 @@ export function SitePage({ locale, copy }: SitePageProps) {
                 perolamagnetizante.pt
               </a>
             </p>
-          </div>
-          <div className="flex flex-wrap justify-center gap-6 md:justify-end md:gap-8">
-            <Link
-              className="text-[11px] font-bold uppercase tracking-[0.18em] text-stone-400 hover:text-stone-900"
-              href="#"
-            >
-              {copy.footer.privacy}
-            </Link>
-            <Link
-              className="text-[11px] font-bold uppercase tracking-[0.18em] text-stone-400 hover:text-stone-900"
-              href="#"
-            >
-              {copy.footer.terms}
-            </Link>
           </div>
         </div>
       </footer>

@@ -107,7 +107,7 @@ export function PracticeAreaModal({
         aria-modal="true"
         aria-labelledby={titleId}
         aria-describedby={descriptionId}
-        className="relative max-h-[92vh] w-full max-w-5xl overflow-y-auto rounded-[1.9rem] border border-white/10 bg-[linear-gradient(180deg,#fcfbf8_0%,#f5f1ea_100%)] shadow-[0_32px_100px_rgba(9,11,19,0.36)] sm:rounded-[2.25rem]"
+        className="relative max-h-[92vh] w-full max-w-[420px] overflow-y-auto overscroll-contain rounded-[1.9rem] border border-white/10 bg-[linear-gradient(180deg,#fcfbf8_0%,#f5f1ea_100%)] shadow-[0_32px_100px_rgba(9,11,19,0.36)] sm:max-w-5xl sm:rounded-[2.25rem]"
       >
         <div className="grid gap-0 md:grid-cols-[minmax(0,1.35fr)_320px]">
           <div className="px-5 py-5 sm:px-8 sm:py-7 md:px-10 md:py-10">
@@ -163,7 +163,7 @@ export function PracticeAreaModal({
             </div>
           </div>
 
-          <aside className="border-t border-[rgba(122,119,109,0.16)] bg-[#292d45] px-5 py-6 text-stone-50 md:border-l md:border-t-0 md:px-7 md:py-10">
+          <aside className="mx-4 mb-4 mt-3 rounded-[1.45rem] border border-[rgba(255,255,255,0.08)] bg-[#292d45] px-5 py-6 text-stone-50 shadow-[0_18px_36px_rgba(9,11,19,0.18)] md:mx-0 md:mb-0 md:mt-0 md:rounded-none md:border-l md:border-t-0 md:px-7 md:py-10 md:shadow-none">
             <div className="sticky top-0 flex min-h-full flex-col md:min-h-[520px]">
               <div className="flex justify-center md:pt-4">
                 <Image
@@ -174,9 +174,9 @@ export function PracticeAreaModal({
               </div>
               <div className="flex flex-1 items-center">
                 <p className="mt-6 text-justify text-base leading-8 text-[rgba(244,239,228,0.8)] md:mt-0">
-                {locale === "pt-BR"
-                  ? "Leitura estratégica, condução técnica e conversa inicial objetiva, com encaminhamento compatível com a natureza da demanda e da especialidade selecionada."
-                  : "Strategic judgement, technical guidance, and an objective first conversation, aligned with both the nature of the matter and the selected practice area."}
+                  {locale === "pt-BR"
+                    ? "Leitura estratégica, condução técnica e conversa inicial objetiva, com encaminhamento compatível com a natureza da demanda e da especialidade selecionada."
+                    : "Strategic judgement, technical guidance, and an objective first conversation, aligned with both the nature of the matter and the selected practice area."}
                 </p>
               </div>
               <a

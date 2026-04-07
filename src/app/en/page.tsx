@@ -6,7 +6,7 @@ import { practiceAreasByLocale } from "@/content/practice-areas";
 import { locales } from "@/content/site-copy";
 
 export const metadata: Metadata = {
-  title: "Corporate and Tax Law",
+  title: "GOLDNER & DIAS PAES ADVOCACIA | Escritório de advocacia",
   description:
     "Elite legal representation for private clients and corporations, with strategic advisory across Brazilian and international matters.",
   alternates: {
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Corporate and Tax Law | Goldner & Dias Paes Advocacia",
+    title: "GOLDNER & DIAS PAES ADVOCACIA | Escritório de advocacia",
     description:
       "Elite legal representation for private clients and corporations, with strategic advisory across Brazilian and international matters.",
     url: "https://www.gdpc.adv.br/en",

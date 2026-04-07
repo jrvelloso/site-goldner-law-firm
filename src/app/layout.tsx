@@ -3,7 +3,7 @@ import { Inter, Newsreader } from "next/font/google";
 
 import "./globals.css";
 
-const siteName = "Goldner & Dias Paes Advocacia";
+const siteName = "GOLDNER & DIAS PAES ADVOCACIA | Escritório de advocacia";
 const siteUrl = "https://www.gdpc.adv.br";
 const defaultDescription =
   "Assessoria jurídica estratégica em Direito Empresarial e Tributário, com atuação em estruturas patrimoniais, sucessórias, imobiliárias e internacionais.";

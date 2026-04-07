@@ -6,7 +6,7 @@ import { practiceAreasByLocale } from "@/content/practice-areas";
 import { locales } from "@/content/site-copy";
 
 export const metadata: Metadata = {
-  title: "Direito Empresarial e Tributário",
+  title: "GOLDNER & DIAS PAES ADVOCACIA | Escritório de advocacia",
   description:
     "Assessoria jurídica de alta precisão em Direito Empresarial e Tributário, com atuação em estruturas patrimoniais, sucessórias, imobiliárias e internacionais.",
   alternates: {
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Direito Empresarial e Tributário | Goldner & Dias Paes Advocacia",
+    title: "GOLDNER & DIAS PAES ADVOCACIA | Escritório de advocacia",
     description:
       "Assessoria jurídica de alta precisão em Direito Empresarial e Tributário, com atuação em estruturas patrimoniais, sucessórias, imobiliárias e internacionais.",
     url: "https://www.gdpc.adv.br/",
